@@ -20,7 +20,7 @@ public class ProjectCleaner {
                 pathname.isDirectory() || pathname.isFile() && pathname.getName().endsWith(".iml"))) {
             if (currentFile.getName().equals(".idea") || currentFile.getName().equals("target")) {
                 System.out.println("rm -fr " + currentFile.getPath() + separatorChar);
-                currentFile.delete(); // TODO doesn't works because directory is not empty
+                deleteDirectory(currentFile);
             } else if (currentFile.isDirectory()) {
                 cleanDirectory(currentFile);
             } else if (currentFile.getName().endsWith(".iml")) {
@@ -28,6 +28,17 @@ public class ProjectCleaner {
                 currentFile.delete();
             }
         }
+    }
+
+    private static void deleteDirectory(File directory) {
+        for (File currentFile : directory.listFiles()) {
+            if (currentFile.isDirectory()) {
+                deleteDirectory(currentFile);
+            } else {
+                currentFile.delete();
+            }
+        }
+        directory.delete();
     }
 
 }
