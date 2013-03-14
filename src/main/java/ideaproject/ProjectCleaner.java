@@ -2,17 +2,36 @@ package ideaproject;
 
 import java.io.File;
 
+import static ideaproject.ProjectCleaner.Status.FAILURE;
+import static ideaproject.ProjectCleaner.Status.SUCCESS;
 import static java.io.File.separatorChar;
 
 public class ProjectCleaner {
 
+    static enum Status {
+        SUCCESS, FAILURE
+    }
+
     public static void main(String... args) {
-        if (args.length != 1) {
+        Status status = launchCleanDirectory(args);
+        if (status == FAILURE) {
             System.err.println("java " + ProjectCleaner.class.getCanonicalName() + " <idea project directory to clean>");
             System.exit(1);
         }
+    }
 
-        cleanDirectory(new File(args[0]));
+    static Status launchCleanDirectory(String... args) {
+        if (args.length != 1) {
+            return FAILURE;
+        }
+
+        File root = new File(args[0]);
+        if (!root.isDirectory()) {
+            return FAILURE;
+        }
+
+        cleanDirectory(root);
+        return SUCCESS;
     }
 
     private static void cleanDirectory(File file) {
