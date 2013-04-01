@@ -12,11 +12,8 @@
 
     <groupId>fr.free.lemerdy.sebastian</groupId>
     <artifactId>code-samples</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0</version>
-    <modules>
-        <module>neon29200</module>
-    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
