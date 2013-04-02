@@ -4,12 +4,13 @@ import static java.lang.String.format;
 
 class FizzBuzz {
 
+    private static final String FIZZ = "Fizz";
+    private static final String BUZZ = "Buzz";
+    private static final int FIZZ_NUMBER = 3;
+    private static final int BUZZ_NUMBER = 5;
     private final Integer number;
 
     FizzBuzz(Integer number) {
-        if (number == null) {
-            throw new NullPointerException("FizzBuzz number can't be null");
-        }
         this.number = number;
     }
 
@@ -24,15 +25,14 @@ class FizzBuzz {
 
     @Override
     public String toString() {
-        StringBuilder result = new StringBuilder();
-        if (isMultipleOf(3)) {
-            result.append("Fizz");
+        if (isMultipleOf(FIZZ_NUMBER) && isMultipleOf(BUZZ_NUMBER)) {
+            return FIZZ + BUZZ;
         }
-        if (isMultipleOf(5)) {
-            result.append("Buzz");
+        if (isMultipleOf(FIZZ_NUMBER)) {
+            return FIZZ;
         }
-        if (result.length() > 0) {
-            return result.toString();
+        if (isMultipleOf(BUZZ_NUMBER)) {
+            return BUZZ;
         }
         return number.toString();
     }
