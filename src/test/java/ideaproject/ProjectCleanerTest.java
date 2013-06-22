@@ -1,6 +1,10 @@
 package ideaproject;
 
 import org.junit.Test;
+import org.mockito.Mockito;
+
+import java.io.File;
+import java.io.FileFilter;
 
 import static ideaproject.ProjectCleaner.Status;
 import static ideaproject.ProjectCleaner.Status.FAILURE;
@@ -23,12 +27,13 @@ public class ProjectCleanerTest {
         assertThat(status).isEqualTo(FAILURE);
     }
 
-//    TODO mock files and directory in order to test all cases
-//    <dependency>
-//        <groupId>org.mockito</groupId>
-//        <artifactId>mockito-core</artifactId>
-//        <version>1.9.5</version>
-//        <scope>test</scope>
-//    </dependency>
+    @Test
+    public void should() throws Exception {
+        File file = Mockito.mock(File.class);
+
+        Mockito.when(file.listFiles(Mockito.mock(FileFilter.class))).thenReturn();
+
+        launchCleanDirectory("test");
+    }
 
 }
