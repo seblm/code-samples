@@ -1,5 +1,7 @@
 package security;
 
+import static java.lang.Math.random;
+
 public class PasswordGenerator {
 
     public String generate(Integer size) {
@@ -12,8 +14,7 @@ public class PasswordGenerator {
         final StringBuilder password = new StringBuilder(16);
 
         for (int i = 0; i < size; i++) {
-            int index = (int) (Math.random() * chars.length());
-            password.append(chars.substring(index, index + 1));
+            password.append(chars.charAt(new Double(random() * chars.length()).intValue()));
         }
 
         return password.toString();
