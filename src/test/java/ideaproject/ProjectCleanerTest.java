@@ -27,13 +27,4 @@ public class ProjectCleanerTest {
         assertThat(status).isEqualTo(FAILURE);
     }
 
-    @Test
-    public void should() throws Exception {
-        File file = Mockito.mock(File.class);
-
-        Mockito.when(file.listFiles(Mockito.mock(FileFilter.class))).thenReturn();
-
-        launchCleanDirectory("test");
-    }
-
 }
