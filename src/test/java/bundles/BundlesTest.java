@@ -57,4 +57,18 @@ public class BundlesTest {
         }
     }
 
+    @Test
+    public void should_use_fallbackLocale_from_Control() {
+        ResourceBundle defaultBundle = ResourceBundle.getBundle("bundles.BundlesTest", Locale.GERMANY, new ResourceBundle.Control() {
+            @Override
+            public Locale getFallbackLocale(String baseName, Locale locale) {
+                return Locale.FRANCE;
+            }
+        });
+
+        String translatedValue = defaultBundle.getString("value");
+
+        assertThat(translatedValue).isEqualTo("francais de France");
+    }
+
 }
