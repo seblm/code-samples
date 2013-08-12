@@ -1,10 +1,6 @@
 package ideaproject;
 
 import org.junit.Test;
-import org.mockito.Mockito;
-
-import java.io.File;
-import java.io.FileFilter;
 
 import static ideaproject.ProjectCleaner.Status;
 import static ideaproject.ProjectCleaner.Status.FAILURE;
