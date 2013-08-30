@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vidal.excalibur.service.resource.RestTestSuite" time="140.084" tests="106" errors="0" skipped="1" failures="4">
+  <properties>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="teamcity.agent.dotnet.build_id" value="95334"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="teamcity.buildConfName" value="Excalibur-REST"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="agent.home.dir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="teamcity.build.properties.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/teamcity.build1326957094014816347.properties"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="build.number" value="673"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="agent.name" value="mac (build.vidal.net)"/>
+    <property name="java.runtime.version" value="1.6.0_51-b11-457-10M4509"/>
+    <property name="teamcity.auth.password" value="WwM14Bb9ZYae6vedANOlKsFAV20ee7A6"/>
+    <property name="teamcity.runner.properties.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/teamcity.runner5605833253295759797.properties"/>
+    <property name="agent.ownPort" value="9090"/>
+    <property name="user.name" value="teamcity"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="teamcity.build.workingDir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/work/82bb8e9ce26b6586"/>
+    <property name="teamcity.version" value="6.5.6 (build 18130)"/>
+    <property name="user.language" value="fr"/>
+    <property name="teamcity.build.id" value="95334"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="classworlds.conf" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/teamcity.m2.conf"/>
+    <property name="teamcity.maven.watcher.home" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/plugins/mavenPlugin/maven-watcher"/>
+    <property name="java.version" value="1.6.0_51"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="teamcity.buildType.id" value="bt142"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="MacRoman"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="user.country" value="FR"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="teamcity.auth.userId" value="TeamCityBuildId=95334"/>
+    <property name="os.version" value="10.6.8"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.version" value="20.51-b01-457"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="teamcity.agent.cpuBenchmark" value="426"/>
+    <property name="user.home" value="/Users/teamcity"/>
+    <property name="teamcity.configuration.properties.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/teamcity.config1232581650042882547.properties"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.library.path" value="/Users/teamcity/nativelibs:/opt/teamcity/bin::.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="teamcity.projectName" value="Core - MASTER"/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="teamcity.idea.home" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/plugins/idea"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="maven.home" value="/opt/maven"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -f /Volumes/Data/opt/TeamCity-6.5/buildAgent/work/82bb8e9ce26b6586/pom.xml -B -Pdata -Ddmi.generate.index=false -Ddmi.directory.index=/data/dmiIndices clean install"/>
+    <property name="java.class.path" value="/opt/maven/boot/plexus-classworlds-2.4.jar:"/>
+    <property name="build.vcs.number.excalibur_rest_env_branch___github__1_" value="1ca5ed7f12ad192291abbfe49088842f9b7a6d95"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="build.vcs.number.1" value="1ca5ed7f12ad192291abbfe49088842f9b7a6d95"/>
+    <property name="agent.work.dir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/work"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.io.tmpdir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="dmi.directory.index" value="/data/dmiIndices"/>
+    <property name="mrj.build" value="10M4509"/>
+    <property name="build.vcs.number" value="1ca5ed7f12ad192291abbfe49088842f9b7a6d95"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="teamcity.build.checkoutDir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/work/82bb8e9ce26b6586"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="user.dir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/work/82bb8e9ce26b6586"/>
+    <property name="mrj.version" value="1060.1.6.0_51-457"/>
+    <property name="teamcity.build.changedFiles.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/changedFiles4383210699113285896.txt"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="teamcity.tests.recentlyFailedTests.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/testsToRunFirst1261481142042509635.txt"/>
+    <property name="file.encoding" value="MacRoman"/>
+    <property name="teamcity.agent.dotnet.agent_url" value="http://localhost:9090/RPC2"/>
+    <property name="dmi.generate.index" value="false"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="com.jetbrains.maven.watcher.report.file" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp/maven-build-info.xml"/>
+    <property name="teamcity.build.tempDir" value="/Volumes/Data/opt/TeamCity-6.5/buildAgent/temp/buildTmp"/>
+  </properties>
+  <testcase name="indicationGroupVmpFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="1.479"/>
+  <testcase name="productFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.271"/>
+  <testcase name="allergiesFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.728"/>
+  <testcase name="cm10Found" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.048"/>
+  <testcase name="indicationVmpFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.664"/>
+  <testcase name="productIndicationsFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.185"/>
+  <testcase name="atcTreeFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="48.146"/>
+  <testcase name="atcClassifications" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.054"/>
+  <testcase name="productsByAtcFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.075"/>
+  <testcase name="productsByVidalClassFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="3.548"/>
+  <testcase name="packagessBySaumonClassFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.66"/>
+  <testcase name="vmpsByAtcClassFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.046"/>
+  <testcase name="SaumonTreeFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="3.717"/>
+  <testcase name="VidalClassTreeFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="19.207"/>
+  <testcase name="productBestDocFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.682"/>
+  <testcase name="productPackagesFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.13"/>
+  <testcase name="productClassificationFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.053"/>
+  <testcase name="vmpAtcClassificationFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.061"/>
+  <testcase name="productGenericTypeFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.033"/>
+  <testcase name="productDocumentsFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.049"/>
+  <testcase name="productActiveExcipientsFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.058"/>
+  <testcase name="productMoleculesFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.073"/>
+  <testcase name="productAndMolecules" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.237"/>
+  <testcase name="productAndAld" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.103"/>
+  <testcase name="productWithAld" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.035"/>
+  <testcase name="productAndSmr" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.086"/>
+  <testcase name="productWithSmr" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.027"/>
+  <testcase name="productWithSmrHTML" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.059"/>
+  <testcase name="productAndForeignEquivalence" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="2.346"/>
+  <testcase name="frenchEquivalentForForeignProduct" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.287"/>
+  <testcase name="productRecosFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.082"/>
+  <testcase name="searchAllProducts" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.385"/>
+  <testcase name="searchProductsFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.766"/>
+  <testcase name="searchProductsStartwith" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.959"/>
+  <testcase name="searchAllMolecules" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="1.407"/>
+  <testcase name="searchAllMoleculesStartingWith" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.037"/>
+  <testcase name="searchAllExcipients" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.468"/>
+  <testcase name="searchAllExcipientsStartingwith" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.025"/>
+  <testcase name="searchProductsByFormAndColor" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="5.824"/>
+  <testcase name="searchPackagesFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="2.595"/>
+  <testcase name="packageFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.042"/>
+  <testcase name="packageSaumonFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.079"/>
+  <testcase name="packageLpprsFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.028"/>
+  <testcase name="packageDocumentsOptFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.065"/>
+  <testcase name="searchCim10sByName" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.038"/>
+  <testcase name="searchRecosFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.05"/>
+  <testcase name="searchRecosAllFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.597"/>
+  <testcase name="searchMoleculesFound" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.093"/>
+  <testcase name="searchProductsByIndicationId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.325"/>
+  <testcase name="searchPackagesBySaumonId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.482"/>
+  <testcase name="getReco" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.065"/>
+  <testcase name="searchProductsByGroupIndicationId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.305"/>
+  <testcase name="searchProductsByCompany" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.994"/>
+  <testcase name="searchPackagesByCompany" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="2.011"/>
+  <testcase name="checkImagesForRecoAreOk" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.039"/>
+  <testcase name="checkImagesStaticAreOk" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.008"/>
+  <testcase name="checkHtmlRecoStaticAreOk" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.008"/>
+  <testcase name="checkHtmlRecoIsOk" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.01"/>
+  <testcase name="checkCssRecoIsOk" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.009"/>
+  <testcase name="searchVmp" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.027"/>
+  <testcase name="searchProductsOfVmp" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.129"/>
+  <testcase name="searchVmpAndProduct" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.034"/>
+  <testcase name="searchProductsByVmp" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.016"/>
+  <testcase name="searchProductsByVidalClass" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.308"/>
+  <testcase name="searchProductsByAtcClass" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.121"/>
+  <testcase name="searchAllCompanies" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.05"/>
+  <testcase name="searchCompaniesByNameMatchingQuery" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.059"/>
+  <testcase name="searchCompaniesByNameStartingWith" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.039"/>
+  <testcase name="searchProductsByMolecule" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.047"/>
+  <testcase name="searchGroupIndicationsByName" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.626"/>
+  <testcase name="searchProductRangesByName" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.149"/>
+  <testcase name="searchProductRangeById" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.018"/>
+  <testcase name="searchForeignProductByProductId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="3.853"/>
+  <testcase name="searchProductsByProductRangeId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.251"/>
+  <testcase name="searchPacksByProductRangeId" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.141"/>
+  <testcase name="searchForeignProductsByName" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.639"/>
+  <testcase name="searchIAMWithInvalidDrugIdsShouldYield404" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.08"/>
+  <testcase name="searchIAMWithDrugs" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0.044"/>
+  <testcase name="generateXSD" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="searchAlertsWithPatient" classname="com.vidal.excalibur.service.resource.api.VerifyStatusOkRESTTest" time="1.061"/>
+  <testcase name="productFound" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="1.998">
+    <failure message="Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;500&gt;." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Expected status code <200> doesn't match actual status code <500>.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:54)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:182)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validateHeadersAndCookies(ResponseSpecificationImpl.groovy:386)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.this$2$validateHeadersAndCookies(ResponseSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$this$2$validateHeadersAndCookies.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:355)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate.call(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeFilterChain(RequestSpecificationImpl.groovy:647)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$invokeFilterChain.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1024)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$this$2$applyPathParamsAndSendRequest.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:122)
+	at com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest.productFound(VerifySecurizedStatusOkDmiRESTTest.java:63)
+]]></failure>
+    <system-out>[REST] 2013-08-08 17:35:01,923 INFO [main] ContextHandler$Context.log(2021) | Destroying Spring FrameworkServlet 'api-rest'
+[REST] 2013-08-08 17:35:01,923 INFO [main] AbstractApplicationContext.doClose(1025) | Closing WebApplicationContext for namespace 'api-rest-servlet': startup date [Thu Aug 08 17:33:11 CEST 2013]; parent: Root WebApplicationContext
+[REST] 2013-08-08 17:35:01,924 INFO [main] DefaultSingletonBeanRegistry.destroySingletons(433) | Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5f790458: defining beans [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,viewResolver,messageSource,multipartResolver]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@20773d03
+[REST] 2013-08-08 17:35:01,927 INFO [main] ContextHandler$Context.log(2021) | Closing Spring root WebApplicationContext
+[REST] 2013-08-08 17:35:01,927 INFO [main] AbstractApplicationContext.doClose(1025) | Closing Root WebApplicationContext: startup date [Thu Aug 08 17:33:00 CEST 2013]; root of context hierarchy
+[REST] 2013-08-08 17:35:01,929 INFO [main] DefaultSingletonBeanRegistry.destroySingletons(433) | Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@20773d03: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,connectionManager,contextUrlProvider,httpClientParams,proxyConfiguration,proxyHttpClientBuilder,directoryConfiguration,documentConfiguration,propertyConfiguration,accessoryRangeDaoImpl,aldDaoImpl,allergyDaoImpl,asmrDaoImpl,atcClassDaoImpl,baseColorDaoImpl,brandedPrescribableDaoImpl,cim10DaoImpl,cispDaoImpl,colorDaoImpl,commonNameGroupCompositionDaoImpl,commonNameGroupDaoImpl,companyDaoImpl,compositionDaoImpl,contraIndicationDaoImpl,countryDaoImpl,documentDaoImpl,domainDaoImpl,drugInteractionClassDaoImpl,ephmraClassDaoImpl,externalLinkDaoImpl,foodInteractionDaoImpl,foreignProductDaoImpl,galenicFormDaoImpl,genericGroupDaoImpl,indicationDaoImpl,indicationGroupDaoImpl,infosDaoImpl,interactionDaoImpl,itemDaoImpl,lpprDaoImpl,moleculeDaoImpl,moleculeSynonymDaoImpl,packageConservationDaoImpl,packDaoImpl,physicoChemicalInteractionDaoImpl,posologyDaoImpl,precautionDaoImpl,productDaoImpl,productPosologyUnitDaoImpl,productRangeDaoImpl,recoDaoImpl,referenceDaoImpl,regionDaoImpl,rmcDaoImpl,routeDaoImpl,saumonClassDaoImpl,sempClassDaoImpl,sfmgDaoImpl,sideEffectDaoImpl,smrDaoImpl,specialistDaoImpl,surveillanceDaoImpl,synonymDaoImpl,toxinDaoImpl,ucdDaoImpl,ucdPosologyUnitDaoImpl,vidalClassDaoImpl,warningDaoImpl,wholeSaleDealerDaoImpl,preferencesConfigurationDaoImpl,prescribableDaoImpl,queryProfile,luceneDaoImpl,appContext,springCheck,documentTransformer,versionManager,placeholderConfig,merlinLocaleResolver,defaultDataSource,sessionFactory,velocityEngine,preferencesConfigurationBo,licenceManager-default,licenceManager-dummy,licenceManagerFactory,brandedPrescribableAlertBoImpl,commonNameGroupAlertBoImpl,packAlertBoImpl,phChAlertsFilter,productAlertBoImpl,securizationBoImpl,ucdAlertBoImpl,accessoryRangeBoImpl,aggregateBoImpl,aldBoImpl,allergyBoImpl,asmrBoImpl,atcClassBoImpl,baseColorBoImpl,cim10BoImpl,cispBoImpl,commonNameGroupBoImpl,companyBoImpl,compositionBoImpl,contraIndicationBoImpl,countryBoImpl,documentBoImpl,drugBoImpl,drugInteractionClassBoImpl,ephmraClassBoImpl,externalLinkBoImpl,fastdocBoImpl,foodInteractionBoImpl,foreignProductBoImpl,galenicFormBoImpl,genericGroupBoImpl,indicationBoImpl,indicationGroupBoImpl,interactionBoImpl,lpprBoImpl,moleculeBoImpl,packageConservationBoImpl,packBoImpl,physicoChemicalInteractionBoImpl,posologyBo,precautionBoImpl,prescribableBoImpl,prescriptionAnalysisBoImpl,prescriptionCostAnalysisBoImpl,productBoImpl,productPosologyUnitBoImpl,productRangeBoImpl,recoBoImpl,redundantInteractionBoImpl,regionBoImpl,rmcBoImpl,routeBoImpl,saumonClassBoImpl,scoredIndicationGroupBoImpl,searchBoImpl,sempClassBoImpl,sfmgBoImpl,sideEffectBoImpl,smrBoImpl,specialistBoImpl,surveillanceBoImpl,synonymBoImpl,toxinBoImpl,ucdBoImpl,ucdPosologyUnitBoImpl,vidalClassBoImpl,warningBoImpl,wholeSaleDealerBoImpl,fmtiHighLevelBoImpl,scoringBoImpl,commonNameGroupUtils,documentRetriever,drugCoupleUtils,drugPrescriptionAnalysisUtils,messageBuilderImpl,messageUtils,posologyServices,posologyBuilder,posologyChailletBuilder,productLineManager,networkTokenManager,tokenClientAuth,authorizationManager,networkConfiguration,transactionConfiguration,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,infosBo,fmti_lucene,fmti_perl,accountBoImpl,backupBoImpl,clientBoImpl,departmentBoImpl,drugFormularyBoImpl,exportCsvBoImpl,formularyBoImpl,importCsvBoImpl,restoreService,saveService,parameterBoImpl,versionBoImpl,accountDaoImpl,clientDaoImpl,departmentDaoImpl,formularyDaoImpl,formularyDocumentDaoImpl,parameterDaoImpl,decoratorHelperImpl,productFilterImpl,backupHelper,databaseFormularyConfig,databaseMetadata,formularyHelper,formularyValidatorImpl,formularyDataSource,formulary-transactionManager,formulary-sessionFactory,messageSource,atomProxyCacheFilter,dataCacheFilter,fastdocCacheFilter,inputStreamUtils,documentUtilsImpl,versionService,cacheConfiguration,noCacheFilter,resourceCacheJMX,RESTCacheFilter,SupportedLocaleFilter,HStream,xmlBeanParser,XStreamWrapper,consumableHtmlProvider,consumableTextProvider,feedProvider,uriService,inMemoryDao,passwordEncoder,apiActiveSubstanceResource,apiActiveSubstancesResource,apiAlertsResource,apiAllergiesRessource,apiAtcResource,apiAtcsResource,apiCim10Resource,apiCommonNameGroupResource,apiCommonNameGroupsResource,apiCompaniesResource,apiCompanyResource,apiDocumentsResource,apiForeignProductResource,apiForeignProductsResource,apiGenericGroupResource,apiIndicationGroupResource,apiIndicationResource,apiIndicationsResource,apiMoleculeResource,apiPackResource,apiPacksResource,apiPathologiesResource,apiProductRangeResource,apiProductRangesResource,apiProductResource,apiProductsResource,apiRecoResource,apiRecosResource,apiSaumonResource,apiSearchResource,apiUcdResource,apiVidalClassificationsResource,atcClassificationResource,saumonClassificationResource,vidalClassificationResource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,licenceManager,tokenService,httpInvokerRequestExecutor,transactionManager,initCache]; root of factory hierarchy
+[REST] 2013-08-08 17:35:01,954 INFO [main] AbstractSessionFactoryBean.destroy(223) | Closing Hibernate SessionFactory
+[REST] 2013-08-08 17:35:01,958 INFO [main] AbstractSessionFactoryBean.destroy(223) | Closing Hibernate SessionFactory
+[REST] 2013-08-08 17:35:01,967 INFO [main] ContextHandler$Context.log(2021) | Shutting down log4j
+[REST] 2013-08-08 17:35:02,047 INFO [main] ContextHandler$Context.log(2021) | Initializing Spring root WebApplicationContext
+[REST] 2013-08-08 17:35:02,048 INFO [main] ContextLoader.initWebApplicationContext(272) | Root WebApplicationContext: initialization started
+[REST] 2013-08-08 17:35:02,050 INFO [main] AbstractApplicationContext.prepareRefresh(500) | Refreshing Root WebApplicationContext: startup date [Thu Aug 08 17:35:02 CEST 2013]; root of context hierarchy
+[REST] 2013-08-08 17:35:02,051 INFO [main] XmlBeanDefinitionReader.loadBeanDefinitions(315) | Loading XML bean definitions from class path resource [applicationContext-excalibur-rest.xml]
+[REST] 2013-08-08 17:35:02,075 INFO [main] XmlBeanDefinitionReader.loadBeanDefinitions(315) | Loading XML bean definitions from class path resource [applicationContext-excalibur-dmi.xml]
+[REST] 2013-08-08 17:35:02,099 INFO [main] XmlBeanDefinitionReader.loadBeanDefinitions(315) | Loading XML bean definitions from class path resource [applicationContext-dmi.xml]
+[REST] 2013-08-08 17:35:02,123 INFO [main] ClassPathScanningCandidateComponentProvider.registerDefaultFilters(202) | JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[REST] 2013-08-08 17:35:02,154 INFO [main] DefaultListableBeanFactory.registerBeanDefinition(647) | Overriding bean definition for bean 'placeholderConfig': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [applicationContext-dmi.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [applicationContext-excalibur-dmi.xml]]
+[REST] 2013-08-08 17:35:02,155 INFO [main] ClassPathScanningCandidateComponentProvider.registerDefaultFilters(202) | JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+[REST] 2013-08-08 17:35:02,249 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [conf.properties]
+[REST] 2013-08-08 17:35:02,251 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [formulary.properties]
+[REST] 2013-08-08 17:35:02,252 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [excalibur.properties]
+[REST] 2013-08-08 17:35:02,253 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [dmi.properties]
+[REST] 2013-08-08 17:35:02,254 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [news.properties]
+[REST] 2013-08-08 17:35:02,254 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [conf-web.properties]
+[REST] 2013-08-08 17:35:02,255 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [apostil.properties]
+[REST] 2013-08-08 17:35:02,256 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [excalibur-apostil.properties]
+[REST] 2013-08-08 17:35:02,256 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [conf-production.properties]
+[REST] 2013-08-08 17:35:02,257 WARN [main] PropertiesLoaderSupport.loadProperties(198) | Could not load properties from class path resource [conf-production.properties]: class path resource [conf-production.properties] cannot be opened because it does not exist
+[REST] 2013-08-08 17:35:02,259 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [excalibur.properties]
+[REST] 2013-08-08 17:35:02,260 INFO [main] PropertiesLoaderSupport.loadProperties(177) | Loading properties file from class path resource [dmi.properties]
+[REST] 2013-08-08 17:35:02,281 INFO [main] DefaultListableBeanFactory.preInstantiateSingletons(581) | Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@327258d3: defining beans [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,placeholderConfig,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,scopedTarget.cladimedDao,cladimedDao,scopedTarget.companyDao,companyDao,dmiIndexGenerator,scopedTarget.lpprDao,lpprDao,scopedTarget.productDmiDao,productDmiDao,scopedTarget.referenceDmiDao,referenceDmiDao,scopedTarget.versionDao,versionDao,queryProfile,luceneDaoImpl,dmiDataSource,dmi-transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,dmi-sessionFactory,cladimedResource,companiesResource,companyResource,dmiResource,dmisResource,dmiAuthorizationFilter,dmiCacheFilter,lpprResource,productDmiResource,productsDmiResource,cacheConfiguration,noCacheFilter,resourceCacheJMX,RESTCacheFilter,SupportedLocaleFilter,HStream,xmlBeanParser,XStreamWrapper,consumableHtmlProvider,consumableTextProvider,feedProvider,uriService,authentication_service_stub,authentication_service_vidalid,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0,initCache]; root of factory hierarchy
+[REST] 2013-08-08 17:35:02,310 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setSessionFactory(org.hibernate.SessionFactory)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,311 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.springframework.orm.hibernate3.HibernateTemplate org.springframework.orm.hibernate3.support.HibernateDaoSupport.getHibernateTemplate()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,312 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.hibernate.SessionFactory org.springframework.orm.hibernate3.support.HibernateDaoSupport.getSessionFactory()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,312 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setHibernateTemplate(org.springframework.orm.hibernate3.HibernateTemplate)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,313 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,350 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setSessionFactory(org.hibernate.SessionFactory)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,351 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.springframework.orm.hibernate3.HibernateTemplate org.springframework.orm.hibernate3.support.HibernateDaoSupport.getHibernateTemplate()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,352 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.hibernate.SessionFactory org.springframework.orm.hibernate3.support.HibernateDaoSupport.getSessionFactory()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,353 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setHibernateTemplate(org.springframework.orm.hibernate3.HibernateTemplate)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,353 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,377 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setSessionFactory(org.hibernate.SessionFactory)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,378 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.springframework.orm.hibernate3.HibernateTemplate org.springframework.orm.hibernate3.support.HibernateDaoSupport.getHibernateTemplate()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,379 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.hibernate.SessionFactory org.springframework.orm.hibernate3.support.HibernateDaoSupport.getSessionFactory()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,380 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setHibernateTemplate(org.springframework.orm.hibernate3.HibernateTemplate)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,380 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,406 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setSessionFactory(org.hibernate.SessionFactory)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,406 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.springframework.orm.hibernate3.HibernateTemplate org.springframework.orm.hibernate3.support.HibernateDaoSupport.getHibernateTemplate()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,407 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.hibernate.SessionFactory org.springframework.orm.hibernate3.support.HibernateDaoSupport.getSessionFactory()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,408 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setHibernateTemplate(org.springframework.orm.hibernate3.HibernateTemplate)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,408 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,442 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setSessionFactory(org.hibernate.SessionFactory)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,443 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.springframework.orm.hibernate3.HibernateTemplate org.springframework.orm.hibernate3.support.HibernateDaoSupport.getHibernateTemplate()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,444 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final org.hibernate.SessionFactory org.springframework.orm.hibernate3.support.HibernateDaoSupport.getSessionFactory()] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,444 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.orm.hibernate3.support.HibernateDaoSupport.setHibernateTemplate(org.springframework.orm.hibernate3.HibernateTemplate)] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,445 WARN [main] Cglib2AopProxy.doValidateClass(255) | Unable to proxy method [public final void org.springframework.dao.support.DaoSupport.afterPropertiesSet() throws java.lang.IllegalArgumentException,org.springframework.beans.factory.BeanInitializationException] because it is final: All calls to this method via a proxy will be routed directly to the proxy.
+[REST] 2013-08-08 17:35:02,531 INFO [main] LocalSessionFactoryBean.buildSessionFactory(777) | Building new Hibernate SessionFactory
+[REST] 2013-08-08 17:35:02,554 INFO [main] AbstractPoolBackedDataSource.getPoolManager(462) | Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 1, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1bqowwc8wq8j3n04nx9hd|7f325e70, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; org.gjt.mm.mysql.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1bqowwc8wq8j3n04nx9hd|7f325e70, idleConnectionTestPeriod -&gt; 7200, initialPoolSize -&gt; 5, jdbcUrl -&gt; jdbc:mysql://database.vidal.net:3306/dmi5, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 3600, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 10, maxStatements -&gt; 1000, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 5, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; SELECT 1, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]
+[REST] 2013-08-08 17:35:03,530 INFO [main] HibernateTransactionManager.afterPropertiesSet(415) | Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 1, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1bqowwc8wq8j3n04nx9hd|7f325e70, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; org.gjt.mm.mysql.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1bqowwc8wq8j3n04nx9hd|7f325e70, idleConnectionTestPeriod -&gt; 7200, initialPoolSize -&gt; 5, jdbcUrl -&gt; jdbc:mysql://database.vidal.net:3306/dmi5, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 3600, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 10, maxStatements -&gt; 1000, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 5, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; SELECT 1, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[REST] 2013-08-08 17:35:03,648 INFO [main] CacheConfiguration.initCache(47) | Cache disabled.
+[REST] 2013-08-08 17:35:03,668 INFO [main] ContextLoader.initWebApplicationContext(301) | Root WebApplicationContext: initialization completed in 1620 ms
+[REST] 2013-08-08 17:35:03,672 INFO [main] ContextHandler$Context.log(2021) | Initializing Spring FrameworkServlet 'api-rest'
+[REST] 2013-08-08 17:35:03,672 INFO [main] FrameworkServlet.initServletBean(444) | FrameworkServlet 'api-rest': initialization started
+[REST] 2013-08-08 17:35:03,674 INFO [main] AbstractApplicationContext.prepareRefresh(500) | Refreshing WebApplicationContext for namespace 'api-rest-servlet': startup date [Thu Aug 08 17:35:03 CEST 2013]; parent: Root WebApplicationContext
+[REST] 2013-08-08 17:35:03,676 INFO [main] XmlBeanDefinitionReader.loadBeanDefinitions(315) | Loading XML bean definitions from ServletContext resource [/WEB-INF/api-rest-servlet.xml]
+[REST] 2013-08-08 17:35:03,703 INFO [main] DefaultListableBeanFactory.preInstantiateSingletons(581) | Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@4fbab163: defining beans [org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping#0,org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,viewResolver,messageSource,multipartResolver]; parent: org.springframework.beans.factory.support.DefaultListableBeanFactory@327258d3
+[REST] 2013-08-08 17:35:03,731 INFO [main] FrameworkServlet.initServletBean(463) | FrameworkServlet 'api-rest': initialization completed in 58 ms
+[REST] 2013-08-08 17:35:03,950 INFO [main] AbstractConnector.doStart(338) | Started SelectChannelConnector@0.0.0.0:8088
+[REST] 2013-08-08 17:35:05,398 INFO [qtp1630664069-54] LocalSessionFactoryBean.buildSessionFactory(777) | Building new Hibernate SessionFactory
+[REST] 2013-08-08 17:35:05,904 INFO [qtp1630664069-54] AbstractPoolBackedDataSource.getPoolManager(462) | Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 1, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1bqowwc8wq8j3n04nx9hd|1ae8653f, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; org.gjt.mm.mysql.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1bqowwc8wq8j3n04nx9hd|1ae8653f, idleConnectionTestPeriod -&gt; 7200, initialPoolSize -&gt; 1, jdbcUrl -&gt; jdbc:mysql://database.vidal.net:3306/fr_master, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 3600, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 2, maxStatements -&gt; 50, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 1, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; SELECT 1, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]
+[REST] 2013-08-08 17:35:05,905 INFO [qtp1630664069-54] HibernateTransactionManager.afterPropertiesSet(415) | Using DataSource [com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -&gt; 1, acquireRetryAttempts -&gt; 30, acquireRetryDelay -&gt; 1000, autoCommitOnClose -&gt; false, automaticTestTable -&gt; null, breakAfterAcquireFailure -&gt; false, checkoutTimeout -&gt; 0, connectionCustomizerClassName -&gt; null, connectionTesterClassName -&gt; com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -&gt; 1bqowwc8wq8j3n04nx9hd|1ae8653f, debugUnreturnedConnectionStackTraces -&gt; false, description -&gt; null, driverClass -&gt; org.gjt.mm.mysql.Driver, factoryClassLocation -&gt; null, forceIgnoreUnresolvedTransactions -&gt; false, identityToken -&gt; 1bqowwc8wq8j3n04nx9hd|1ae8653f, idleConnectionTestPeriod -&gt; 7200, initialPoolSize -&gt; 1, jdbcUrl -&gt; jdbc:mysql://database.vidal.net:3306/fr_master, maxAdministrativeTaskTime -&gt; 0, maxConnectionAge -&gt; 0, maxIdleTime -&gt; 3600, maxIdleTimeExcessConnections -&gt; 0, maxPoolSize -&gt; 2, maxStatements -&gt; 50, maxStatementsPerConnection -&gt; 0, minPoolSize -&gt; 1, numHelperThreads -&gt; 3, numThreadsAwaitingCheckoutDefaultUser -&gt; 0, preferredTestQuery -&gt; SELECT 1, properties -&gt; {user=******, password=******}, propertyCycle -&gt; 0, testConnectionOnCheckin -&gt; false, testConnectionOnCheckout -&gt; false, unreturnedConnectionTimeout -&gt; 0, usesTraditionalReflectiveProxies -&gt; false ]] of Hibernate SessionFactory for HibernateTransactionManager
+[REST] 2013-08-08 17:35:05,919 WARN [qtp1630664069-54] ServletHandler.doHandle(492) | 
+javax.servlet.ServletException: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:418)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	... 33 more
+[REST] 2013-08-08 17:35:05,924 WARN [qtp1630664069-54] ServletHandler.doHandle(517) | /rest/imd/product/104444
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-out>
+    <system-err>log4j:WARN No appenders could be found for logger (org.eclipse.jetty.servlet.listener.ELContextCleaner).
+log4j:WARN Please initialize the log4j system properly.
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.servlet.SpringServlet getContext
+INFO: Using default applicationContext
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, cladimedResource, of type com.vidal.excalibur.dmi.resource.CladimedResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, companiesResource, of type com.vidal.excalibur.dmi.resource.CompaniesResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, companyResource, of type com.vidal.excalibur.dmi.resource.CompanyResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, dmiResource, of type com.vidal.excalibur.dmi.resource.DmiResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, dmisResource, of type com.vidal.excalibur.dmi.resource.DmisResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, lpprResource, of type com.vidal.excalibur.dmi.resource.LpprResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, productDmiResource, of type com.vidal.excalibur.dmi.resource.ProductDmiResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, productsDmiResource, of type com.vidal.excalibur.dmi.resource.ProductsDmiResource as a root resource class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, consumableHtmlProvider, of type com.vidal.utils.rest.provider.ConsumableHtmlProvider as a provider class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, consumableTextProvider, of type com.vidal.utils.rest.provider.ConsumableTextProvider as a provider class
+8 aožt 2013 17:35:03 com.sun.jersey.spi.spring.container.SpringComponentProviderFactory registerSpringBeans
+INFO: Registering Spring bean, feedProvider, of type com.vidal.utils.rest.provider.FeedProvider as a provider class
+8 aožt 2013 17:35:03 com.sun.jersey.server.impl.application.WebApplicationImpl _initiate
+INFO: Initiating Jersey application, version 'Jersey: 1.12 02/15/2012 04:51 PM'
+8 aožt 2013 17:35:05 com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
+GRAVE: The exception contained within MappableContainerException could not be mapped to a response, re-throwing to the HTTP container
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-err>
+  </testcase>
+  <testcase name="productNotFound" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.028"/>
+  <testcase name="packageNotFound" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.04"/>
+  <testcase name="productWithoutGoodAuthorization" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.016"/>
+  <testcase name="packageById" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.054"/>
+  <testcase name="productSearchByName" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.932">
+    <failure message="Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;500&gt;." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Expected status code <200> doesn't match actual status code <500>.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validateHeadersAndCookies(ResponseSpecificationImpl.groovy:386)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.this$2$validateHeadersAndCookies(ResponseSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$this$2$validateHeadersAndCookies.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:355)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate.call(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeFilterChain(RequestSpecificationImpl.groovy:647)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$invokeFilterChain.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1024)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$this$2$applyPathParamsAndSendRequest.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:122)
+	at com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest.productSearchByName(VerifySecurizedStatusOkDmiRESTTest.java:79)
+]]></failure>
+    <system-out>[REST] 2013-08-08 17:35:06,989 WARN [qtp1630664069-59] ServletHandler.doHandle(492) | 
+javax.servlet.ServletException: java.lang.NoSuchFieldError: BY_PRODUCT_DMI
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:418)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.NoSuchFieldError: BY_PRODUCT_DMI
+	at com.vidal.excalibur.dmi.resource.ProductsDmiResource.fullTextSearch(ProductsDmiResource.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	... 33 more
+[REST] 2013-08-08 17:35:06,991 WARN [qtp1630664069-59] ServletHandler.doHandle(517) | /rest/imd/products
+java.lang.NoSuchFieldError: BY_PRODUCT_DMI
+	at com.vidal.excalibur.dmi.resource.ProductsDmiResource.fullTextSearch(ProductsDmiResource.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-out>
+    <system-err>8 aožt 2013 17:35:06 com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
+GRAVE: The exception contained within MappableContainerException could not be mapped to a response, re-throwing to the HTTP container
+java.lang.NoSuchFieldError: BY_PRODUCT_DMI
+	at com.vidal.excalibur.dmi.resource.ProductsDmiResource.fullTextSearch(ProductsDmiResource.java:54)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-err>
+  </testcase>
+  <testcase name="packageSearchByName" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="25.596"/>
+  <testcase name="packageByIdWithProductAggregate" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.051"/>
+  <testcase name="productByPackageId" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.021"/>
+  <testcase name="productByIdWithPackagesAggregate" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.252">
+    <failure message="Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;500&gt;." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Expected status code <200> doesn't match actual status code <500>.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:54)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:182)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validateHeadersAndCookies(ResponseSpecificationImpl.groovy:386)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.this$2$validateHeadersAndCookies(ResponseSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$this$2$validateHeadersAndCookies.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:355)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate.call(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeFilterChain(RequestSpecificationImpl.groovy:647)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$invokeFilterChain.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1024)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$this$2$applyPathParamsAndSendRequest.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:122)
+	at com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest.productByIdWithPackagesAggregate(VerifySecurizedStatusOkDmiRESTTest.java:111)
+]]></failure>
+    <system-out>[REST] 2013-08-08 17:35:32,931 WARN [qtp1630664069-55] ServletHandler.doHandle(492) | 
+javax.servlet.ServletException: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:418)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	... 33 more
+[REST] 2013-08-08 17:35:32,932 WARN [qtp1630664069-55] ServletHandler.doHandle(517) | /rest/imd/product/104444
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-out>
+    <system-err>8 aožt 2013 17:35:32 com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
+GRAVE: The exception contained within MappableContainerException could not be mapped to a response, re-throwing to the HTTP container
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-err>
+  </testcase>
+  <testcase name="packagesByProductId" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.263"/>
+  <testcase name="companyById" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.055"/>
+  <testcase name="companyByPackageId" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.019"/>
+  <testcase name="packageByIdWithCompanyAggregate" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.022"/>
+  <testcase name="companiesByProductId" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.156"/>
+  <testcase name="productByIdWithCompanyAggregate" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.249">
+    <failure message="Expected status code &lt;200&gt; doesn&apos;t match actual status code &lt;500&gt;." type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Expected status code <200> doesn't match actual status code <500>.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:102)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:190)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validateHeadersAndCookies(ResponseSpecificationImpl.groovy:386)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.this$2$validateHeadersAndCookies(ResponseSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$this$2$validateHeadersAndCookies.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:355)
+	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate.call(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.invokeFilterChain(RequestSpecificationImpl.groovy:647)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$invokeFilterChain.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1024)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at com.jayway.restassured.internal.RequestSpecificationImpl$this$2$applyPathParamsAndSendRequest.callCurrent(Unknown Source)
+	at com.jayway.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:122)
+	at com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest.productByIdWithCompanyAggregate(VerifySecurizedStatusOkDmiRESTTest.java:159)
+]]></failure>
+    <system-out>[REST] 2013-08-08 17:35:33,695 WARN [qtp1630664069-56] ServletHandler.doHandle(492) | 
+javax.servlet.ServletException: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:418)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	... 33 more
+[REST] 2013-08-08 17:35:33,696 WARN [qtp1630664069-56] ServletHandler.doHandle(517) | /rest/imd/product/104444
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-out>
+    <system-err>8 aožt 2013 17:35:33 com.sun.jersey.spi.container.ContainerResponse mapMappableContainerException
+GRAVE: The exception contained within MappableContainerException could not be mapped to a response, re-throwing to the HTTP container
+java.lang.NoSuchFieldError: BY_COMPANY
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductEntry(ProductDmiResource.java:214)
+	at com.vidal.excalibur.dmi.resource.ProductDmiResource.getProductDmiById(ProductDmiResource.java:113)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.sun.jersey.spi.container.JavaMethodInvokerFactory$1.invoke(JavaMethodInvokerFactory.java:60)
+	at com.sun.jersey.server.impl.model.method.dispatch.AbstractResourceMethodDispatchProvider$TypeOutInvoker._dispatch(AbstractResourceMethodDispatchProvider.java:185)
+	at com.sun.jersey.server.impl.model.method.dispatch.ResourceJavaMethodDispatcher.dispatch(ResourceJavaMethodDispatcher.java:75)
+	at com.sun.jersey.server.impl.uri.rules.HttpMethodRule.accept(HttpMethodRule.java:288)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.ResourceClassRule.accept(ResourceClassRule.java:108)
+	at com.sun.jersey.server.impl.uri.rules.RightHandPathRule.accept(RightHandPathRule.java:147)
+	at com.sun.jersey.server.impl.uri.rules.RootResourceClassesRule.accept(RootResourceClassesRule.java:84)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1483)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl._handleRequest(WebApplicationImpl.java:1414)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1363)
+	at com.sun.jersey.server.impl.application.WebApplicationImpl.handleRequest(WebApplicationImpl.java:1353)
+	at com.sun.jersey.spi.container.servlet.WebComponent.service(WebComponent.java:414)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:537)
+	at com.sun.jersey.spi.container.servlet.ServletContainer.service(ServletContainer.java:708)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:820)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1448)
+	at com.vidal.utils.rest.filters.SupportedLocaleFilter.doFilter(SupportedLocaleFilter.java:65)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at com.vidal.utils.rest.filters.CacheFilter.doFilter(CacheFilter.java:34)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:949)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1011)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:668)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:680)
+</system-err>
+  </testcase>
+  <testcase name="lpprById" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.079"/>
+  <testcase name="cladimedById" classname="com.vidal.excalibur.service.resource.dmi.VerifySecurizedStatusOkDmiRESTTest" time="0.077"/>
+  <testcase name="searchScore" classname="com.vidal.excalibur.service.resource.pmsi.VerifyPmsiRESTTest" time="0.149"/>
+  <testcase name="computeScoresWithInvalidPayload" classname="com.vidal.excalibur.service.resource.pmsi.VerifyPmsiRESTTest" time="0.034"/>
+  <testcase name="computeScoresWithoutFeedback" classname="com.vidal.excalibur.service.resource.pmsi.VerifyPmsiRESTTest" time="0.206"/>
+  <testcase name="computeScoresWithFeedback" classname="com.vidal.excalibur.service.resource.pmsi.VerifyPmsiRESTTest" time="0.241"/>
+  <testcase name="productFoundWithLocale" classname="com.vidal.excalibur.service.resource.locale.VerifyMultiLangRESTTest" time="0.384"/>
+  <testcase name="requestWithUnknowLocale" classname="com.vidal.excalibur.service.resource.locale.VerifyMultiLangRESTTest" time="0.009"/>
+  <testcase name="documentFoundWithLocale" classname="com.vidal.excalibur.service.resource.locale.VerifyMultiLangRESTTest" time="0.118"/>
+  <testcase name="searchByNamesWorkWithLocale" classname="com.vidal.excalibur.service.resource.locale.VerifyMultiLangRESTTest" time="0.4"/>
+</testsuite>
