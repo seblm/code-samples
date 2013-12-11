@@ -5,7 +5,7 @@ import org.junit.Test;
 import static ideaproject.ProjectCleaner.Status;
 import static ideaproject.ProjectCleaner.Status.FAILURE;
 import static ideaproject.ProjectCleaner.launchCleanDirectory;
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ProjectCleanerTest {
 

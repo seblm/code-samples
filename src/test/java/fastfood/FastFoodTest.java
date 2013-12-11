@@ -3,7 +3,7 @@ package fastfood;
 import org.junit.Test;
 
 import static fastfood.Ingredient.*;
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 
 public class FastFoodTest {

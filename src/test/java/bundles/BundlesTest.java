@@ -5,17 +5,17 @@ import org.junit.Test;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class BundlesTest {
 
     @Test
     public void should_display_value_with_language() {
-       ResourceBundle frBundle = ResourceBundle.getBundle("bundles.BundlesTest", Locale.FRENCH);
+        ResourceBundle frBundle = ResourceBundle.getBundle("bundles.BundlesTest", Locale.FRENCH);
 
-       String translatedValue = frBundle.getString("value");
+        String translatedValue = frBundle.getString("value");
 
-       assertThat(translatedValue).isEqualTo("francais");
+        assertThat(translatedValue).isEqualTo("francais");
     }
 
     @Test

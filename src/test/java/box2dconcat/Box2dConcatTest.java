@@ -7,7 +7,7 @@ import java.io.*;
 import static java.io.File.separatorChar;
 import static java.lang.System.out;
 import static java.lang.System.setOut;
-import static org.fest.assertions.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Box2dConcatTest {
 
@@ -78,7 +78,7 @@ public class Box2dConcatTest {
             in.write(COPYRIGHT);
             in.write(FILE_CONTENT);
         } finally {
-          in.close();
+            in.close();
         }
         File f3 = new File("." + separatorChar + "directory" + separatorChar + "sub-directory" + separatorChar + "b2class.js");
         in = new FileWriter(f3);
@@ -86,7 +86,7 @@ public class Box2dConcatTest {
             in.write(COPYRIGHT);
             in.write("var b2class = '';\n");
         } finally {
-          in.close();
+            in.close();
         }
 
         File f4 = new File("." + separatorChar + "directory");
