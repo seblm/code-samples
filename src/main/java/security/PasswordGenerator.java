@@ -1,9 +1,10 @@
 package security;
 
-import static java.lang.Math.random;
+import java.util.Random;
+
+import static java.util.stream.IntStream.range;
 
 public class PasswordGenerator {
-
     public static final Integer DEFAULT_SIZE = 16;
 
     public String generate(Integer size) {
@@ -13,11 +14,10 @@ public class PasswordGenerator {
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
                 "_-";
 
+        final Random random = new Random();
         final StringBuilder password = new StringBuilder(size);
 
-        for (Integer i = 0; i < size; i++) {
-            password.append(chars.charAt(new Double(random() * chars.length()).intValue()));
-        }
+        range(0, size).forEach((i) -> password.append(chars.charAt(random.nextInt(chars.length()))));
 
         return password.toString();
     }
@@ -37,5 +37,4 @@ public class PasswordGenerator {
 
         System.out.println(new PasswordGenerator().generate(length));
     }
-
 }
