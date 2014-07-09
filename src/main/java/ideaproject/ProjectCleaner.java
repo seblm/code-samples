@@ -1,7 +1,6 @@
 package ideaproject;
 
 import java.io.File;
-import java.io.FileFilter;
 
 import static ideaproject.ProjectCleaner.Status.FAILURE;
 import static ideaproject.ProjectCleaner.Status.SUCCESS;
@@ -36,12 +35,8 @@ public class ProjectCleaner {
     }
 
     private static void cleanDirectory(File file) {
-        for (File currentFile : file.listFiles(new FileFilter() {
-            @Override
-            public boolean accept(File pathname) {
-                return pathname.isDirectory() || pathname.isFile() && pathname.getName().endsWith(".iml");
-            }
-        })) {
+        for (File currentFile : file.listFiles(pathname -> pathname.isDirectory() && !pathname.getName().equals("code-samples")
+                || pathname.isFile() && pathname.getName().endsWith(".iml"))) {
             if (currentFile.getName().equals(".idea") || currentFile.getName().equals("target")) {
                 System.out.println("rm -fr " + currentFile.getPath() + separatorChar);
                 deleteDirectory(currentFile);
