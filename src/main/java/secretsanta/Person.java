@@ -1,4 +1,4 @@
-package secretsantas;
+package secretsanta;
 
 public class Person {
     private final String firstName;
@@ -11,7 +11,7 @@ public class Person {
         this.email = email;
     }
 
-    public boolean canHaveSantasAs(Person santas) {
+    public boolean canHaveSantaAs(Person santas) {
         return !lastName.equals(santas.lastName);
     }
 

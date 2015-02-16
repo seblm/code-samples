@@ -1,4 +1,4 @@
-package secretsantas;
+package secretsanta;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,7 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class SecretSantasTest {
+public class SecretSantaTest {
     public static final Pattern PERSON = Pattern.compile(".+ (\\w+) (\\w+) <(\\w+@\\w+\\.[net|org|com]+)>.*");
     
     @Rule
@@ -44,9 +44,9 @@ public class SecretSantasTest {
         Person virgil = new Person("Virgil", "Brigman", "virgil@rigworkersunion.org");
         Person lindsey = new Person("Lindsey", "Brigman", "lindsey@iseealiens.net");
         List<Person> persons = asList(luke, leia, toula, gus, bruce, virgil, lindsey);
-        SecretSantas secretSantas = new SecretSantas(persons, emailer);
+        SecretSanta secretSanta = new SecretSanta(persons, emailer);
 
-        secretSantas.chooseSantas();
+        secretSanta.chooseSantas();
 
         checkSantas(persons);
     }
@@ -57,9 +57,9 @@ public class SecretSantasTest {
         Person toula = new Person("Toula", "Portokalos", "toula@manhunter.org");
         Person virgil = new Person("Virgil", "Brigman", "virgil@rigworkersunion.org");
         List<Person> persons = asList(luke, toula, virgil);
-        SecretSantas secretSantas = new SecretSantas(persons, emailer);
+        SecretSanta secretSanta = new SecretSanta(persons, emailer);
 
-        secretSantas.chooseSantas();
+        secretSanta.chooseSantas();
 
         checkSantas(persons);
     }

@@ -1,15 +1,15 @@
-package secretsantas;
+package secretsanta;
 
 import java.util.*;
 
 import static java.util.stream.Collectors.toList;
 
-public class SecretSantas {
+public class SecretSanta {
     private final List<Person> persons;
     private final Emailer emailer;
     private final Random random;
 
-    public SecretSantas(List<Person> persons, Emailer emailer) {
+    public SecretSanta(List<Person> persons, Emailer emailer) {
         this.persons = persons;
         this.emailer = emailer;
         this.random = new Random();
@@ -25,16 +25,16 @@ public class SecretSantas {
         }
 
         for (Person person : santas.keySet()) {
-            Person personSantas = santas.get(person);
-            if (person.canHaveSantasAs(personSantas)) {
+            Person personSanta = santas.get(person);
+            if (person.canHaveSantaAs(personSanta)) {
                 continue;
             }
 
             List<Person> candidates = persons.stream()
                     .filter(otherPerson -> {
                         Person otherPersonSantas = santas.get(otherPerson);
-                        return otherPersonSantas.canHaveSantasAs(person)
-                                && personSantas.canHaveSantasAs(otherPerson);
+                        return otherPersonSantas.canHaveSantaAs(person)
+                                && personSanta.canHaveSantaAs(otherPerson);
                     })
                     .collect(toList());
 
