@@ -2,17 +2,19 @@ package twitterid;
 
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class TwitterIdToScreenNameTest {
 
   @Test
-  public void should_convert_id_to_screename() throws Exception {
+  public void should_convert_id_to_screename() {
     Integer seblmId = 15370457;
 
-    String seblmScreenName = TwitterIdToScreenName.getScreenNameFromId(seblmId);
+    Optional<String> seblmScreenName = TwitterIdToScreenName.getScreenNameFromId(seblmId);
 
-    assertThat(seblmScreenName).isEqualTo("seblm");
+    assertThat(seblmScreenName).isEqualTo(Optional.of("seblm"));
   }
 
 }
