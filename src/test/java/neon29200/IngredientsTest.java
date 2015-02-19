@@ -1,12 +1,22 @@
 package neon29200;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
 
+import static java.util.logging.Level.OFF;
+import static java.util.logging.Logger.getLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class IngredientsTest {
+
+    @BeforeClass
+    public static void shutdownLoggers() {
+        getLogger(Ingredient.class.getName()).setLevel(OFF);
+        getLogger(Produit_simple.class.getName()).setLevel(OFF);
+        getLogger(Produit_compose.class.getName()).setLevel(OFF);
+    }
 
     @Test
     public void should_create_new_ingredient() {

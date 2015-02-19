@@ -2,12 +2,17 @@ package puzzler;
 
 import java.util.Comparator;
 import java.util.function.IntUnaryOperator;
+import java.util.logging.Logger;
 import java.util.stream.Stream;
+
+import static java.util.logging.Logger.getLogger;
 
 /**
  * Inspired from http://qandwhat.apps.runkite.com/i-failed-a-twitter-interview
  */
 public class Puddles {
+    private static final Logger LOGGER = getLogger(Puddles.class.getName());
+    
     private final Integer[] wallHeights;
     private final Integer maxWallHeights;
 
@@ -47,30 +52,32 @@ public class Puddles {
     }
 
     private void print() {
+        StringBuilder out = new StringBuilder();
         for (int y = maxWallHeights; y >= 0; y--) {
             for (int x = 0; x < wallHeights.length; x++) {
                 if (wallHeights[x] == y) {
-                    System.out.print('_');
+                    out.append('_');
                 } else {
-                    System.out.print(' ');
+                    out.append(' ');
                 }
                 if (x < wallHeights.length - 1) {
                     if (wallHeights[x].equals(wallHeights[x + 1]) && wallHeights[x] == y) {
-                        System.out.print('_');
+                        out.append('_');
                     } else if (wallHeights[x] > y && y >= wallHeights[x + 1]) {
-                        System.out.print('|');
+                        out.append('|');
                     } else if (wallHeights[x] <= y && y < wallHeights[x + 1]) {
-                        System.out.print('|');
+                        out.append('|');
                     } else {
-                        System.out.print(' ');
+                        out.append(' ');
                     }
                 }
             }
-            System.out.println();
+            out.append('\n');
         }
         for (int wallHeight : wallHeights) {
-            System.out.print(wallHeight + " ");
+            out.append(wallHeight).append(" ");
         }
-        System.out.println();
+        out.append('\n');
+        LOGGER.info(out.toString());
     }
 }

@@ -1,10 +1,18 @@
 package puzzler;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static java.util.logging.Level.OFF;
+import static java.util.logging.Logger.getLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PuddlesTest {
+    @BeforeClass
+    public static void shutdownLogger() {
+        getLogger(Puddles.class.getName()).setLevel(OFF);
+    }
+
     @Test
     public void acceptance_test() {
         assertThat(new Puddles(2, 5, 1, 2, 3, 4, 7, 7, 6).rain()).isEqualTo(10);

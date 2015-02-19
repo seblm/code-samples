@@ -1,13 +1,25 @@
 package scanner;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
+import static java.util.logging.Level.OFF;
+import static java.util.logging.Logger.getLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ScannerTest {
+
+    private static final Logger LOGGER = getLogger(ScannerTest.class.getName());
+    
+    @BeforeClass
+    public static void shutdownLogger() {
+        LOGGER.setLevel(OFF);
+    }
 
     @Test
     public void should_read_6_lines_and_match_pattern() {
@@ -22,7 +34,7 @@ public class ScannerTest {
                 "\n").useDelimiter("\n");
         Pattern mowerPosition = Pattern.compile("com\\.github\\.vspiewak\\.mowitnow\\.mower\\.app\\.App - (.+)");
         for (Integer i = 0; i < 6; i++) {
-            System.out.println(scanner.nextLine());
+            LOGGER.info(scanner.nextLine());
         }
 
         scanner.findInLine(mowerPosition);
