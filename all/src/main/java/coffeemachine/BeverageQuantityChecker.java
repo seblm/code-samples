@@ -1,5 +1,5 @@
 package coffeemachine;
 
 public interface BeverageQuantityChecker {
-    void notifyMissingDrink(Drink drink);
+    boolean isEmpty(Drink drink);
 }

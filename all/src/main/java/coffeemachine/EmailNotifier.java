@@ -1,5 +1,5 @@
 package coffeemachine;
 
 public interface EmailNotifier {
-    boolean isEmpty(Drink drink);
+    void notifyMissingDrink(Drink drink);
 }
