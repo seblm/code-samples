@@ -17,6 +17,7 @@
     
     <modules>
         <module>all</module>
+        <module>selma-custom-mapper</module>
         <module>web</module>
     </modules>
     
