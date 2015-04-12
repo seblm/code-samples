@@ -1,13 +1,12 @@
 package rpncalculator;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Optional;
+import java.util.*;
 import java.util.function.IntBinaryOperator;
 
 import static java.lang.Integer.parseInt;
 import static java.util.Arrays.stream;
 import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toMap;
 
 /**
  * Implementation of https://gist.github.com/dlresende/274194dd6ec993eb5ec5
@@ -34,6 +33,7 @@ public class RPNCalculator {
         DIVIDE('/', (right, left) -> left / right),
         MULIPLY('*', (right, left) -> left * right);
 
+        private static Map<String, Operation> operationByCharacter;
         private final char character;
         private final IntBinaryOperator function;
 
@@ -47,12 +47,17 @@ public class RPNCalculator {
         }
 
         private static Optional<Operation> parse(String operationAsString) {
-            for (Operation operation : Operation.values()) {
-                if (operation.character == operationAsString.charAt(0)) {
-                    return Optional.of(operation);
-                }
+            return Optional.ofNullable(getOrCreateOperationByCharacter().get(operationAsString));
+        }
+
+        private static Map<String, Operation> getOrCreateOperationByCharacter() {
+            if (operationByCharacter == null) {
+                operationByCharacter = stream(values()).collect(toMap(
+                                operation -> Character.toString(operation.character),
+                                operation -> operation)
+                );
             }
-            return Optional.empty();
+            return operationByCharacter;
         }
     }
 }
