@@ -11,7 +11,7 @@
     </parent>
 
     <properties>
-        <selma.version>0.11</selma.version>
+        <selma.version>0.12</selma.version>
     </properties>
 
     <artifactId>selma-custom-mapper</artifactId>

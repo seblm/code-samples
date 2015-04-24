@@ -14,8 +14,6 @@ public class DefensiveCopy {
     }
 
     public void setValues(List<String> values) {
-        List<String> newValues = new ArrayList<>();
-        newValues.addAll(values);
-        this.values = newValues;
+        this.values = new ArrayList<>(values);
     }
 }
