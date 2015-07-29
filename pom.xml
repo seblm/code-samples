@@ -17,6 +17,7 @@
     
     <modules>
         <module>all</module>
+        <module>ubiquitous-language-parser-java</module>
         <module>selma-custom-mapper</module>
         <module>selma-defensive-copy</module>
         <module>web</module>
