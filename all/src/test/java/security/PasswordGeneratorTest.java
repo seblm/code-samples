@@ -11,6 +11,6 @@ public class PasswordGeneratorTest {
 
         String generatedPassword = passwordGenerator.generate(16);
 
-        assertThat(generatedPassword).hasSize(16).matches("[a-zA-Z0-9_\\-]+");
+        assertThat(generatedPassword).hasSize(16).matches("[a-zA-Z0-9 .!:@#$%&*\\(\\)_+=|<>\\?\\{\\}\\[\\]\\-/]+");
     }
 }

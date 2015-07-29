@@ -12,7 +12,7 @@ public class PasswordGenerator {
                 "0123456789" +
                 "abcdefghijklmnopqrstuvwxyz" +
                 "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
-                "_-";
+                " .!:@#$%&*()_+=|<>?{}[]-/";
 
         final Random random = new Random();
         final StringBuilder password = new StringBuilder(size);
