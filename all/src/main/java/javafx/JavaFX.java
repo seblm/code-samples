@@ -22,15 +22,12 @@ public class JavaFX extends Application {
         ToggleButton button = new ToggleButton("Click");
 
         final StringProperty btnText = button.textProperty();
-        button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                ToggleButton source = (ToggleButton) actionEvent.getSource();
-                if (source.isSelected()) {
-                    btnText.set("Clicked!");
-                } else {
-                    btnText.set("Click!");
-                }
+        button.setOnAction(actionEvent -> {
+            ToggleButton source = (ToggleButton) actionEvent.getSource();
+            if (source.isSelected()) {
+                btnText.set("Clicked!");
+            } else {
+                btnText.set("Click!");
             }
         });
 
