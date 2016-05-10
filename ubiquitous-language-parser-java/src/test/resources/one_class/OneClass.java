@@ -13,7 +13,7 @@ public class OneClass {
     }
 
     public static void main(String[] args) {
-        System.out.println(new OneClass(new SomeImportantType("value").businessRule("argument"));
+        System.out.println(new OneClass(new SomeImportantType("value").businessRule("argument")));
     }
     
     private static class SomeImportantType {
