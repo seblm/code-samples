@@ -57,7 +57,7 @@ public class ProjectCleaner {
 
     private static void cleanDirectory(File file) {
         for (File currentFile : file.listFiles(pathname -> isDirectoryButNotCodeSamples(pathname) || isDotIML(pathname))) {
-            if (currentFile.getName().equals(".idea") || currentFile.getName().equals("target")) {
+            if (currentFile.getName().equals(".idea") || currentFile.getName().equals("target") || currentFile.getName().equals("node_modules")) {
                 System.out.println("rm -fr " + currentFile.getPath() + separatorChar);
                 deleteDirectory(currentFile);
             } else if (currentFile.isDirectory()) {
