@@ -1,17 +1,18 @@
 package secretsanta;
 
-public class Person {
-    private final String firstName;
-    final String lastName;
-    private final String email;
+class Person {
 
-    public Person(String firstName, String lastName, String email) {
+    final String firstName;
+    final String lastName;
+    final String email;
+
+    Person(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
     }
 
-    public boolean canHaveSantaAs(Person santas) {
+    boolean canHaveSantaAs(Person santas) {
         return !lastName.equals(santas.lastName);
     }
 
@@ -35,4 +36,5 @@ public class Person {
     public int hashCode() {
         return email.hashCode();
     }
+
 }

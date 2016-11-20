@@ -1,5 +1,7 @@
 package secretsanta;
 
-public interface Emailer {
-    void email(Person to, String message);
+interface Emailer {
+
+    void email(Person to, Person santa);
+
 }

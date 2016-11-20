@@ -2,20 +2,22 @@ package secretsanta;
 
 import java.util.*;
 
+import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
-public class SecretSanta {
+class SecretSanta {
+
     private final List<Person> persons;
     private final Emailer emailer;
     private final Random random;
 
-    public SecretSanta(List<Person> persons, Emailer emailer) {
+    SecretSanta(List<Person> persons, Emailer emailer) {
         this.persons = persons;
         this.emailer = emailer;
         this.random = new Random();
     }
 
-    public void chooseSantas() {
+    void chooseSantas() {
         List<Person> availableSantas = new ArrayList<>(persons);
         Collections.shuffle(availableSantas);
 
@@ -46,13 +48,27 @@ public class SecretSanta {
         }
 
         for (Map.Entry<Person, Person> personAndSantas : santas.entrySet()) {
-            emailer.email(personAndSantas.getKey(), "your santas is " + personAndSantas.getValue());
+            emailer.email(personAndSantas.getKey(), personAndSantas.getValue());
         }
     }
 
     private void swapSantas(Person person, Person otherPerson, Map<Person, Person> santas) {
         Person previousPersonSantas = santas.put(person, santas.get(otherPerson));
         santas.put(otherPerson, previousPersonSantas);
+    }
+
+    public static void main(String[] args) {
+        new SecretSanta(asList(
+                new Person("****", "** ***** *******", "****.*******@gmail.com"),
+                new Person("******", "** ***** *******", "******.*******@gmail.com"),
+                new Person("*******", "** ***** *********", "*******.**-*****@laposte.net"),
+                new Person("*******", "** ***** *********", "*******_*****@hotmail.com"),
+                new Person("****-******", "** *****", "*****@free.fr"),
+                new Person("********", "** *****", "******@free.fr"),
+                new Person("*********", "** ***** **********", "*********.*******@gmail.com"),
+                new Person("********", "** ***** **********", "************@hotmail.com")
+        ), new GmailEmailer("youremail@gmail.com", "16charspassword")) // please see https://security.google.com/settings/security/apppasswords
+        .chooseSantas();
     }
 
 }
