@@ -32,12 +32,12 @@ class GmailEmailer implements Emailer {
         try {
             Message message = new MimeMessage(session);
             message.setRecipients(Message.RecipientType.TO, singletonList(new InternetAddress(to.email)).toArray(new Address[1]));
-            message.setSubject("Cadeau de Noël du 14 janvier 2017");
+            message.setSubject("Cadeau de Noël du 28 décembre 2019");
             message.setText("" +
                     "Bonjour " + to.firstName + "," +
                     "\n" +
                     "\n" +
-                    "Voici le prénom de la personne à qui tu devras offrir un cadeau le 14 janvier 2017 à Fleury-les-Aubrais :\n" +
+                    "Voici le prénom de la personne à qui tu devras offrir un cadeau le 28 décembre 2019 à Fleury-les-Aubrais :\n" +
                     santa.firstName + "\n" +
                     "\n" +
                     "C'est un tirage au sort : personne d'autre que toi n'est au courant ! Garde le secret.");

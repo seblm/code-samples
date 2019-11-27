@@ -60,7 +60,6 @@ class SecretSanta {
     public static void main(String[] args) {
         new SecretSanta(asList(
                 new Person("****", "** ***** *******", "****.*******@gmail.com"),
-                new Person("******", "** ***** *******", "******.*******@gmail.com"),
                 new Person("*******", "** ***** *********", "*******.**-*****@laposte.net"),
                 new Person("*******", "** ***** *********", "*******_*****@hotmail.com"),
                 new Person("****-******", "** *****", "*****@free.fr"),
