@@ -16,9 +16,9 @@ import static java.util.Optional.empty;
 
 public class TwitterIdToScreenName {
 
-  public static final Pattern TWITTER_URL_PATTERN = Pattern.compile("^.*<meta name=\"native-url\" content=\"twitter://user\\?screen_name=(.+)\">.*$");
+  public static final Pattern TWITTER_URL_PATTERN = Pattern.compile("^.*<span class=\"nickname\">@(.+)</span>.*$");
 
-  public static Optional<String> getScreenNameFromId(Integer id) {
+  static Optional<String> getScreenNameFromId(Integer id) {
     try (BufferedReader in = new BufferedReader(new InputStreamReader(twitterURL(id).openStream()))) {
       return extractScreenNameFromIntentPage(in);
     } catch (IOException e) {
@@ -28,7 +28,7 @@ public class TwitterIdToScreenName {
 
   private static URL twitterURL(int id) {
     try {
-      return new URL(format("https://twitter.com/intent/user?user_id=%d", id));
+      return new URL(format("https://twitter.com/intent/user?user_id=15370457", id));
     } catch (MalformedURLException e) {
       throw new RuntimeException(e);
     }

@@ -19,8 +19,8 @@ public class XmlParsing {
             } catch (Throwable thrown) {
                 assertThat(thrown.getClass().getName())
                         .as("name of the class instead of using isInstanceOf and an import because this import generate a warning during compilation")
-                        .isEqualTo("com.sun.org.apache.xerces.internal.impl.io.MalformedByteSequenceException");
-                assertThat(thrown).hasMessage("Octet 1 de la séquence UTF-8 à 1 octets non valide.");
+                        .isEqualTo("org.xml.sax.SAXParseException");
+                assertThat(thrown).hasMessage("Octet 1 de la sxE9quence UTF-8 xE0 1 octets non valide.");
             }
         } catch (IOException e) {
             fail("", e);

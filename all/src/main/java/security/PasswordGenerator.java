@@ -26,7 +26,7 @@ public class PasswordGenerator {
         Integer length = DEFAULT_SIZE;
         if (args.length == 1) {
             try {
-                length = new Integer(args[0]);
+                length = Integer.parseInt(args[0]);
                 if (length < 1 || length > 100) {
                     length = DEFAULT_SIZE;
                 }

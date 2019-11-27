@@ -7,7 +7,7 @@ public class Providers {
 
     public static void main(String[] args) {
         for (Provider provider : Security.getProviders()) {
-            System.out.println(provider.getVersion() + '\t' + provider.getName() + '\t' + provider.getInfo());
+            System.out.println(provider.getVersionStr() + '\t' + provider.getName() + '\t' + provider.getInfo());
         }
     }
 }

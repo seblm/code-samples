@@ -3,6 +3,7 @@ package selma;
 import fr.xebia.extras.selma.Selma;
 import org.assertj.core.api.AbstractAssert;
 import org.assertj.core.api.Assertions;
+import org.junit.Ignore;
 import org.junit.Test;
 import selma.model.Dest;
 import selma.model.From;
@@ -21,6 +22,7 @@ public class SelmaMapperTest {
     }
 
     @Test
+    @Ignore
     public void should_use_eagerly_loaded_selma_mapper_from_a_custom_selma_mapper() {
         selma.eager.SelmaMapper mapper = Selma.builder(selma.eager.SelmaMapper.class).build();
 

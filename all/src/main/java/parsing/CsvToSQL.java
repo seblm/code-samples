@@ -84,7 +84,7 @@ public class CsvToSQL {
         }
 
         public void setPrice(String price) {
-            this.price = new Float(price);
+            this.price = Float.parseFloat(price);
         }
 
         @Override
