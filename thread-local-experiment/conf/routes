@@ -1,2 +1,2 @@
-GET /        controllers.HomeController.index(id: Option[String])
-GET /waitFor controllers.HomeController.waitFor(millis: Long)
+GET /:id          controllers.HomeController.index(id: String)
+GET /wait-for/:id controllers.HomeController.waitFor(id: String, millis: Long)
