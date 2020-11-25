@@ -9,3 +9,5 @@ scalaVersion := "2.13.3"
 
 libraryDependencies += guice
 libraryDependencies += ws
+
+libraryDependencies += "io.opentelemetry" % "opentelemetry-api" % "0.9.1"
