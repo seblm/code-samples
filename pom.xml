@@ -18,6 +18,7 @@
     <modules>
         <module>all</module>
         <module>codingame</module>
+        <module>craftinginterpreters</module>
         <module>selma-custom-mapper</module>
         <module>selma-defensive-copy</module>
         <module>web</module>
