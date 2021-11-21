@@ -2,7 +2,7 @@ package kata.diamond;
 
 import org.junit.Test;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class DiamondTest {
     @Test

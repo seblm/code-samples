@@ -8,11 +8,12 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
-import java.util.*;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -67,7 +68,7 @@ public class SecretSantaTest {
         for (int i = 0; i < persons.size(); i++) {
             santas.put(to.getAllValues().get(i), santa.getAllValues().get(i));
         }
-        Person[] personsAsArray = persons.toArray(new Person[persons.size()]);
+        Person[] personsAsArray = persons.toArray(new Person[0]);
         assertThat(santas.keySet()).containsOnly(personsAsArray);
         for (Map.Entry<Person, Person> personAndSantas : santas.entrySet()) {
             assertThat(personAndSantas.getKey())
@@ -77,7 +78,7 @@ public class SecretSantaTest {
                     .as("santas for %s could not belongs to same family", personAndSantas.getKey())
                     .isNotEqualTo(personAndSantas.getValue().lastName);
         }
-        assertThat(santas.values().stream().collect(toList())).containsOnly(personsAsArray);
+        assertThat(new ArrayList<>(santas.values())).containsOnly(personsAsArray);
     }
 
 }
