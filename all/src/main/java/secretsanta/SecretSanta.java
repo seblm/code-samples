@@ -67,7 +67,7 @@ class SecretSanta {
                 new Person("*********", "** ***** **********", "*********.*******@gmail.com"),
                 new Person("********", "** ***** **********", "************@hotmail.com")
         ), new GmailEmailer("youremail@gmail.com", "16charspassword")) // please see https://security.google.com/settings/security/apppasswords
-        .chooseSantas();
+                .chooseSantas();
     }
 
 }
