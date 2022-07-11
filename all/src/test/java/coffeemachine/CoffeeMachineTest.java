@@ -4,24 +4,24 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import static coffeemachine.Drink.*;
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class CoffeeMachineTest {
     @Mock
     private DrinkMaker drinkMaker;
-    
+
     @Mock
     private EmailNotifier emailNotifier;
-    
+
     @Mock
     private BeverageQuantityChecker beverageQuantityChecker;
 
@@ -88,7 +88,7 @@ public class CoffeeMachineTest {
         verify(drinkMaker).command("Ch::");
         verify(drinkMaker).command("M:order extra hot coffee without sugar");
     }
-    
+
     @Test
     public void should_report() {
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker)
@@ -100,11 +100,11 @@ public class CoffeeMachineTest {
         String report = coffeeMachine.report();
 
         assertThat(report).isEqualTo("" +
-                        "chocolate 0\n" +
-                        "coffee 2\n" +
-                        "orange juice 0\n" +
-                        "tea 1\n" +
-                        "total 160"
+                "chocolate 0\n" +
+                "coffee 2\n" +
+                "orange juice 0\n" +
+                "tea 1\n" +
+                "total 160"
         );
     }
 
@@ -112,9 +112,9 @@ public class CoffeeMachineTest {
     public void should_notify_if_there_is_a_shortage() {
         given(beverageQuantityChecker.isEmpty(TEA)).willReturn(TRUE);
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker);
-        
+
         coffeeMachine.insert(40).order(new Order(TEA));
-        
+
         verify(drinkMaker).command("M:No more tea");
         verify(emailNotifier).notifyMissingDrink(TEA);
     }

@@ -7,7 +7,7 @@ import java.util.Map;
 import static com.craftinginterpreters.lox.TokenType.*;
 
 public class Scanner {
-    private static final Map<String, TokenType> keywords;
+    private static final Map<String, TokenType> keywords = Map.of();
     private final String source;
     private final List<Token> tokens = new ArrayList<>();
     private int start = 0;
