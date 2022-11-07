@@ -20,7 +20,7 @@ public class XmlParsing {
                 assertThat(thrown.getClass().getName())
                         .as("name of the class instead of using isInstanceOf and an import because this import generate a warning during compilation")
                         .isEqualTo("org.xml.sax.SAXParseException");
-                assertThat(thrown).hasMessage("Octet 1 de la sxE9quence UTF-8 xE0 1 octets non valide.");
+                assertThat(thrown).hasMessage("Octet 1 de la séquence UTF-8 à 1 octets non valide.");
             }
         } catch (IOException e) {
             fail("", e);
