@@ -12,8 +12,8 @@ class Person {
         this.email = email;
     }
 
-    boolean canHaveSantaAs(Person santas) {
-        return !lastName.equals(santas.lastName);
+    boolean canHaveSantaAs(Person santa) {
+        return !lastName.equals(santa.lastName);
     }
 
     @Override
