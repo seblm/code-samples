@@ -1,0 +1,1 @@
+This is scala project with async calls.
