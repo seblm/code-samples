@@ -3,8 +3,24 @@ name: Java CI with Maven
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'pom.xml'
+      - 'all/**'
+      - 'codingame/**'
+      - 'craftinginterpreters/**'
+      - 'selma-custom-mapper/**'
+      - 'selma-defensive-copy/**'
+      - 'web/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'pom.xml'
+      - 'all/**'
+      - 'codingame/**'
+      - 'craftinginterpreters/**'
+      - 'selma-custom-mapper/**'
+      - 'selma-defensive-copy/**'
+      - 'web/**'
 
 jobs:
   build:
