@@ -25,5 +25,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'sbt'
-      - run: sbt compile
+      - run: sbt scalafmtCheckAll compile
         working-directory: scala

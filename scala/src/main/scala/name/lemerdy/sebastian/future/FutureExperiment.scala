@@ -6,8 +6,7 @@ import scala.concurrent.{Await, ExecutionContext, Future}
 import scala.concurrent.duration._
 import scala.util.Random
 
-/**
-  * Simple application to implements a first async call that is either a success or an async call to a second one.
+/** Simple application to implements a first async call that is either a success or an async call to a second one.
   */
 object FutureExperiment:
 
