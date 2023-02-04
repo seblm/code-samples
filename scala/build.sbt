@@ -4,5 +4,5 @@ lazy val root = project
     name := "scala",
     version := "0.1.0-SNAPSHOT",
 
-    scalaVersion := "3.2.1",
+    scalaVersion := "3.2.2",
   )
