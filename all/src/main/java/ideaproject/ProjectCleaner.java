@@ -2,6 +2,8 @@ package ideaproject;
 
 import java.io.File;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 import static ideaproject.ProjectCleaner.Status.FAILURE;
@@ -14,21 +16,21 @@ public class ProjectCleaner {
         SUCCESS(0),
         FAILURE(1, () -> System.err.println("java " + ProjectCleaner.class.getCanonicalName() + " <idea project directory to clean>"));
 
-        private final Optional<Runnable> task;
+        private final Runnable task;
         private final int status;
 
         Status(int status) {
             this.status = status;
-            this.task = Optional.empty();
+            this.task = null;
         }
 
         Status(int status, Runnable task) {
             this.status = status;
-            this.task = Optional.of(task);
+            this.task = task;
         }
 
         Status runEndTask() {
-            task.ifPresent(Runnable::run);
+            Optional.ofNullable(task).ifPresent(Runnable::run);
             return this;
         }
 
@@ -55,9 +57,11 @@ public class ProjectCleaner {
         return SUCCESS;
     }
 
+    private static final List<String> directoriesToDelete = List.of(".idea", "target", "node_modules");
+
     private static void cleanDirectory(File file) {
-        for (File currentFile : file.listFiles(pathname -> isDirectoryButNotCodeSamples(pathname) || isDotIML(pathname))) {
-            if (currentFile.getName().equals(".idea") || currentFile.getName().equals("target") || currentFile.getName().equals("node_modules")) {
+        for (File currentFile : Objects.requireNonNull(file.listFiles(ProjectCleaner::isDirectoryButNotCodeSamples))) {
+            if (directoriesToDelete.contains(currentFile.getName())) {
                 System.out.println("rm -fr " + currentFile.getPath() + separatorChar);
                 deleteDirectory(currentFile);
             } else if (currentFile.isDirectory()) {
@@ -73,12 +77,8 @@ public class ProjectCleaner {
         return pathname.isDirectory() && !pathname.getName().equals("code-samples");
     }
 
-    private static boolean isDotIML(File pathname) {
-        return pathname.isFile() && pathname.getName().endsWith(".iml");
-    }
-
     private static void deleteDirectory(File directory) {
-        Arrays.stream(directory.listFiles($ -> true)).forEach(currentFile -> {
+        Arrays.stream(Objects.requireNonNull(directory.listFiles())).forEach(currentFile -> {
             if (currentFile.isDirectory()) {
                 deleteDirectory(currentFile);
             } else {
