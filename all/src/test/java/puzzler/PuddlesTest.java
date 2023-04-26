@@ -1,14 +1,14 @@
 package puzzler;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import static java.util.logging.Level.OFF;
 import static java.util.logging.Logger.getLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PuddlesTest {
-    @BeforeClass
+    @BeforeAll
     public static void shutdownLogger() {
         getLogger(Puddles.class.getName()).setLevel(OFF);
     }

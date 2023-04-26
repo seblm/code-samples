@@ -1,10 +1,9 @@
 package coffeemachine;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static coffeemachine.Drink.*;
 import static java.lang.Boolean.FALSE;
@@ -14,7 +13,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class CoffeeMachineTest {
     @Mock
     private DrinkMaker drinkMaker;
@@ -25,13 +24,13 @@ public class CoffeeMachineTest {
     @Mock
     private BeverageQuantityChecker beverageQuantityChecker;
 
-    @Before
-    public void thereAreNeverShortage() {
+    private void thereAreNeverShortage() {
         given(beverageQuantityChecker.isEmpty(any(Drink.class))).willReturn(FALSE);
     }
 
     @Test
     public void should_send_command_with_tea_one_sugar_and_a_stick() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker).insert(40);
 
         coffeeMachine.order(new Order(TEA, 1));
@@ -42,6 +41,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_command_with_chocolate_without_sugar_and_without_a_stick() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker).insert(50);
 
         coffeeMachine.order(new Order(CHOCOLATE));
@@ -52,6 +52,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_command_with_coffee_with_two_sugars_and_a_stick() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker).insert(60);
 
         coffeeMachine.order(new Order(COFFEE, 2));
@@ -62,6 +63,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_command_with_orange_juice() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker).insert(60);
 
         coffeeMachine.order(new Order(ORANGE_JUICE));
@@ -81,6 +83,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_send_command_with_extra_hot_coffee() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker).insert(60);
 
         coffeeMachine.order(new Order(COFFEE).extraHot());
@@ -91,6 +94,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_report() {
+        thereAreNeverShortage();
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker)
                 .insert(40).order(new Order(TEA))
                 .insert(60).order(new Order(COFFEE))
@@ -110,6 +114,7 @@ public class CoffeeMachineTest {
 
     @Test
     public void should_notify_if_there_is_a_shortage() {
+        thereAreNeverShortage();
         given(beverageQuantityChecker.isEmpty(TEA)).willReturn(TRUE);
         CoffeeMachine coffeeMachine = new CoffeeMachine(drinkMaker, emailNotifier, beverageQuantityChecker);
 

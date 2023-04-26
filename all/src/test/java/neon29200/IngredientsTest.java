@@ -1,7 +1,7 @@
 package neon29200;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class IngredientsTest {
 
-    @BeforeClass
+    @BeforeAll
     public static void shutdownLoggers() {
         getLogger(Ingredient.class.getName()).setLevel(OFF);
         getLogger(Produit_simple.class.getName()).setLevel(OFF);

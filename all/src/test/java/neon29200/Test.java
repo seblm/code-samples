@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Test {
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void main() throws Exception {
         List<Ingredient> tomates = Ingredients.createIngredients("tomate", 2.5, 10);
         assertThat(tomates.get(0).DecrisIngredient()).isEqualTo("L'ingrédient tomate est au prix unitaire de 2.5 €");

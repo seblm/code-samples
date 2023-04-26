@@ -1,7 +1,7 @@
 package rpncalculator;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,7 +9,7 @@ public class RPNCalculatorTest {
 
     private RPNCalculator rpnCalculator;
 
-    @Before
+    @BeforeEach
     public void initializeRpnCalculator() {
         rpnCalculator = new RPNCalculator();
     }

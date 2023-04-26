@@ -1,10 +1,9 @@
 package scanner;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.util.Scanner;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
@@ -16,7 +15,7 @@ public class ScannerTest {
 
     private static final Logger LOGGER = getLogger(ScannerTest.class.getName());
     
-    @BeforeClass
+    @BeforeAll
     public static void shutdownLogger() {
         LOGGER.setLevel(OFF);
     }

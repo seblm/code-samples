@@ -1,6 +1,6 @@
 package box2dconcat;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.*;
 

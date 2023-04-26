@@ -1,6 +1,6 @@
 package ideaproject;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static ideaproject.ProjectCleaner.Status;
 import static ideaproject.ProjectCleaner.Status.FAILURE;

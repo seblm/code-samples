@@ -1,10 +1,10 @@
 package fastfood;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static fastfood.Ingredient.*;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class FastFoodTest {
 
