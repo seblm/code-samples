@@ -25,6 +25,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'sbt'
-      - run: sbt test
+      - run: sbt scalafmtCheckAll test
         working-directory: extreme_startup-http4s
-
