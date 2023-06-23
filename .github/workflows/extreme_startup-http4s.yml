@@ -1,14 +1,14 @@
-name: Scala CI
+name: extreme_startup-http4s
 
 on:
   push:
     branches: [ main ]
     paths:
-      - 'scala/**'
+      - 'extreme_startup-http4s/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'scala/**'
+      - 'extreme_startup-http4s/**'
 
 permissions:
   contents: read
@@ -25,5 +25,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'sbt'
-      - run: sbt scalafmtCheckAll compile
-        working-directory: scala
+      - run: sbt test
+        working-directory: extreme_startup-http4s
+
