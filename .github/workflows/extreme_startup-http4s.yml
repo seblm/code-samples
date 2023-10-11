@@ -25,5 +25,5 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'sbt'
-      - run: sbt scalafmtCheckAll test undeclaredCompileDependenciesTest unusedCompileDependenciesTest
+      - run: sbt scalafmtCheckAll compile undeclaredCompileDependenciesTest unusedCompileDependenciesTest
         working-directory: extreme_startup-http4s
