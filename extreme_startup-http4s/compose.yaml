@@ -1,0 +1,8 @@
+services:
+  extreme_startup:
+    image: seblm/extreme_startup
+    ports:
+      - 3000:3000
+    environment:
+      WARMUP:
+      LENIENT:
