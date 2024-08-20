@@ -25,7 +25,7 @@ cp ../core/library/core.jar ../../code-samples/scala/lib/
 
 ## Same type is generated twice into openapi model by Tapir
 
-This project focuses on what are the consequences of the bugfix provided to fix this issue.
+This project focuses on what are the consequences of [the bugfix][tapir bugfix] provided to fix [this issue][tapir issue].
 
 In case where a type is referenced both
 - by an endpoint with a super type thus using polymorphism and discriminator
@@ -35,8 +35,11 @@ Then this type is exported into two different models:
 - one using a required discriminator
 - the other, suffixed by `1`, that do not inclue discriminator
 
+The order may change according to order of declared endpoints.
 
 [ant]: https://ant.apache.org "Web site of the Apache Ant project"
 [maven central repository]: https://central.sonatype.com
 [homebrew]: https://brew.sh "Web site of Homebrew: The Missing Package Manager for macOS (or Linux)"
+[tapir bugfix]: https://github.com/softwaremill/tapir/pull/2376
+[tapir issue]: https://github.com/softwaremill/tapir/issues/2358
 [Processing]: https://processing.org "Web site of Processing: a flexible software sketchbook and a language for learning how to code."
