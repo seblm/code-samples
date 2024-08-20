@@ -1,27 +1,37 @@
 package com.softwaremill
 
-import org.apache.pekko.actor.ActorSystem
-import org.apache.pekko.http.scaladsl.Http
-import sttp.tapir.server.pekkohttp.PekkoHttpServerInterpreter
+import io.circe.generic.auto.given
+import sttp.apispec.openapi.circe.yaml.given
+import sttp.tapir.*
+import sttp.tapir.docs.openapi.OpenAPIDocsInterpreter
+import sttp.tapir.generic.Configuration
+import sttp.tapir.generic.auto.given
+import sttp.tapir.json.circe.jsonBody
 
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.io.StdIn
+import java.nio.file.{Files, Paths}
+import scala.util.Using
 
 @main def run(): Unit =
-  implicit val actorSystem: ActorSystem = ActorSystem()
 
-  val route = PekkoHttpServerInterpreter().toRoute(Endpoints.all)
+  sealed trait Entity:
+    def name: String
 
-  val port = sys.env.get("http.port").map(_.toInt).getOrElse(8080)
+  case class Person(name: String, age: Int) extends Entity
+  case class Organization(name: String) extends Entity
 
-  val bindingFuture = Http()
-    .newServerAt("localhost", port)
-    .bindFlow(route)
-    .map { binding =>
-      println(s"Server started at http://localhost:${binding.localAddress.getPort}. Press ENTER key to exit.")
-      binding
-    }
+  implicit val tapirSchemaConfiguration: Configuration =
+    Configuration.default.withDiscriminator("kind").withKebabCaseDiscriminatorValues
 
-  StdIn.readLine()
+  val personEndpoint = endpoint.get
+    .in("api" / "user" / path["String"]("userId"))
+    .in(jsonBody[Person])
 
-  bindingFuture.flatMap(_.unbind()).onComplete(_ => actorSystem.terminate())
+  val entityEndpoint = endpoint.get
+    .in("api" / "entity" / path["String"]("entityId"))
+    .in(jsonBody[Entity])
+
+  val docs: String =
+    OpenAPIDocsInterpreter().toOpenAPI(List(personEndpoint, entityEndpoint), "title", "1.0").toYaml
+
+  Using(Files.newBufferedWriter(Paths.get("src/main/resources/openapi.yaml"))): out =>
+    out.write(docs)
