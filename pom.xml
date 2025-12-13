@@ -18,8 +18,6 @@
     <modules>
         <module>all</module>
         <module>craftinginterpreters</module>
-        <module>selma-custom-mapper</module>
-        <module>selma-defensive-copy</module>
     </modules>
     
 </project>

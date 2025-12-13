@@ -8,8 +8,6 @@ on:
       - 'all/**'
       - 'codingame/**'
       - 'craftinginterpreters/**'
-      - 'selma-custom-mapper/**'
-      - 'selma-defensive-copy/**'
       - 'web/**'
   pull_request:
     branches: [ main ]
@@ -18,8 +16,6 @@ on:
       - 'all/**'
       - 'codingame/**'
       - 'craftinginterpreters/**'
-      - 'selma-custom-mapper/**'
-      - 'selma-defensive-copy/**'
       - 'web/**'
 
 jobs:
