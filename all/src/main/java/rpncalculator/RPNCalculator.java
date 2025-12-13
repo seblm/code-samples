@@ -9,10 +9,10 @@ import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
 
 /**
- * Implementation of https://gist.github.com/dlresende/274194dd6ec993eb5ec5
+ * Implementation of <a href="https://gist.github.com/dlresende/274194dd6ec993eb5ec5">RPN Calculator Kata</a>
  */
 public class RPNCalculator {
-    private Deque<Integer> numbers = new ArrayDeque<>();
+    private final Deque<Integer> numbers = new ArrayDeque<>();
 
     public String compute(String expression) {
         numbers.clear();
@@ -28,10 +28,10 @@ public class RPNCalculator {
     }
 
     private enum Operation {
-        ADD('+', (right, left) -> left + right),
+        ADD('+', Integer::sum),
         SUBSTRACT('-', (right, left) -> left - right),
         DIVIDE('/', (right, left) -> left / right),
-        MULIPLY('*', (right, left) -> left * right);
+        MULTIPLY('*', (right, left) -> left * right);
 
         private static Map<String, Operation> operationByCharacter;
         private final char character;

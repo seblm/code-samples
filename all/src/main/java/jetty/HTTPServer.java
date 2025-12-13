@@ -1,30 +1,34 @@
 package jetty;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Request;
+import org.eclipse.jetty.server.Response;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.server.handler.AbstractHandler;
+import org.eclipse.jetty.util.Callback;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.nio.ByteBuffer;
+
+import static org.eclipse.jetty.http.HttpHeader.CONTENT_TYPE;
 
 public class HTTPServer {
 
-    public static void main(String[] args) throws Exception {
+    static void main(String[] args) throws Exception {
         Server server = new Server(8080);
-        server.setHandler(new AbstractHandler() {
+        server.setHandler(new Handler.Abstract() {
             @Override
-            public void handle(String target, Request baseRequest, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-                response.setContentType("text/html;charset=utf-8");
+            public boolean handle(Request request, Response response, Callback callback) throws IOException, ServletException {
+                response.getHeaders().put(CONTENT_TYPE, "text/html;charset=utf-8");
                 response.setStatus(HttpServletResponse.SC_OK);
-                baseRequest.setHandled(true);
-                response.getWriter().println("hello world");
+                response.write(true, ByteBuffer.wrap("hello world".getBytes()), callback);
                 try {
                     Thread.sleep(1500);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                return true;
             }
         });
         server.start();

@@ -2,7 +2,7 @@ package math;
 
 public class PiOut {
 
-    public static void main(String[] args) {
+    static void main() {
         System.out.println(Math.PI);
     }
 

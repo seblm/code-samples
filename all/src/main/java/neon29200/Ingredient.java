@@ -15,7 +15,4 @@ public class Ingredient {
         this.prix_unitaire=prix_unitaire;
     }
 
-    public String DecrisIngredient(){
-        return "L'ingrédient "+this.nom_ingredient+" est au prix unitaire de "+this.prix_unitaire+" €";
-    }
 }

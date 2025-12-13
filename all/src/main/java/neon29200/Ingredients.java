@@ -12,13 +12,13 @@ public final class Ingredients {
      * Singleton statique qui permet de ne référencer qu'une seule instance
      * de la classe Ingredients.
      */
-    private static Ingredients ingredients = new Ingredients();
+    private static final Ingredients ingredients = new Ingredients();
 
     /**
      * Liste de tous les ingrédients créés par l'intermédiaire de l'instance
      * unique d'ingrédients.
      */
-    private List<Ingredient> stockIngredient;
+    private final List<Ingredient> stockIngredient;
 
     /**
      * Constructeur privé interdisant son instanciation à l'extérieur de la classe.
@@ -35,7 +35,7 @@ public final class Ingredients {
      * @return liste de tous les ingrédients créés
      */
     public static List<Ingredient> createIngredients(String ingredientType, double price, int quantity) {
-        List<Ingredient> newIngredients = new ArrayList<Ingredient>();
+        List<Ingredient> newIngredients = new ArrayList<>();
         for (int i = 0; i < quantity; i++) {
             newIngredients.add(new Ingredient(ingredientType, price, ingredients));
         }

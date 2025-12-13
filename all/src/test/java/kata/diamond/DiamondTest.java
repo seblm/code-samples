@@ -12,19 +12,19 @@ public class DiamondTest {
 
     @Test
     public void should_print_B() {
-        assertThat(new Diamond('B').toString()).isEqualTo("" +
-                " A \n" +
-                "B B\n" +
-                " A ");
+        assertThat(new Diamond('B').toString()).isEqualTo("""
+                 A\s
+                B B
+                 A\s""");
     }
 
     @Test
     public void should_print_C() {
-        assertThat(new Diamond('C').toString()).isEqualTo("" +
-                "  A  \n" +
-                " B B \n" +
-                "C   C\n" +
-                " B B \n" +
-                "  A  ");
+        assertThat(new Diamond('C').toString()).isEqualTo("""
+                  A \s
+                 B B\s
+                C   C
+                 B B\s
+                  A \s""");
     }
 }

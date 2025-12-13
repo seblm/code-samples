@@ -5,7 +5,7 @@ import java.security.Security;
 
 public class Providers {
 
-    public static void main(String[] args) {
+    static void main() {
         for (Provider provider : Security.getProviders()) {
             System.out.println(provider.getVersionStr() + '\t' + provider.getName() + '\t' + provider.getInfo());
         }

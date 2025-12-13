@@ -1,6 +1,5 @@
 package neon29200;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -15,7 +14,7 @@ public class Produit_compose extends Produit {
     Produit_compose(String nom_produit, double prix_produit, ProduitsEnVente stock, Ingredient... liste_ingredient) {
         super(nom_produit, prix_produit, stock);
         LOGGER.info("Un nouveau produit composé est disponible!");
-        this.liste_ingredient = Arrays.asList(liste_ingredient);
+        this.liste_ingredient = List.of(liste_ingredient);
     }
 
 }

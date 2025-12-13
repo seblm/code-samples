@@ -4,7 +4,7 @@ public class Runner {
 
   public static void main(String[] args) throws IOException {
     System.out.println(System.getenv("PATH"));
-    Process exec = Runtime.getRuntime().exec("env");
+    Process exec = Runtime.getRuntime().exec(new String[]{"env"});
     BufferedReader in = new BufferedReader(new InputStreamReader(exec.getInputStream()));
     String currentLine;
     while ((currentLine = in.readLine()) != null) {

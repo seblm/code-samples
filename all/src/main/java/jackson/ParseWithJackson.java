@@ -10,16 +10,18 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class ParseWithJackson {
-    public static void main(String[] args) throws IOException {
-        List<Tick> ticks = new JsonFactory(new ObjectMapper())
-                .createParser(new File("~/src/code-elevator-dgageot/src/main/resources/users.json"))
-                .readValueAs(new TypeReference<List<Tick>>() { });
-
-        System.out.println("lowerFloor = " + ticks.stream()
-                .map(tick -> Stream.of(tick.getUsers()).map(user -> Math.min(user[0], user[1])).reduce(Math::min).get())
-                .reduce(Math::min));
-        System.out.println("higherFloor = " + ticks.stream()
-                .map(tick -> Stream.of(tick.getUsers()).map(user -> Math.max(user[0], user[1])).reduce(Math::max).get())
-                .reduce(Math::max));
+    static void main() throws IOException {
+        try (var parser = new JsonFactory(new ObjectMapper())
+                .createParser(new File("~/Developer/src/code-elevator-dgageot/src/main/resources/users.json"))) {
+            List<Tick> ticks = parser.readValueAs(new TypeReference<List<Tick>>() {});
+            System.out.println("lowerFloor = " + ticks.stream()
+                    .flatMap(tick -> Stream.of(tick.getUsers()).map(user -> Math.min(user[0], user[1])).reduce(Math::min).stream())
+                    .reduce(Math::min)
+                    .orElse(Integer.MAX_VALUE));
+            System.out.println("higherFloor = " + ticks.stream()
+                    .flatMap(tick -> Stream.of(tick.getUsers()).map(user -> Math.max(user[0], user[1])).reduce(Math::max).stream())
+                    .reduce(Math::max)
+                    .orElse(Integer.MIN_VALUE));
+        }
     }
 }

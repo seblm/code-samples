@@ -1,16 +1,6 @@
 package secretsanta;
 
-class Person {
-
-    final String firstName;
-    final String lastName;
-    final String email;
-
-    Person(String firstName, String lastName, String email) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-    }
+record Person(String firstName, String lastName, String email) {
 
     boolean canHaveSantaAs(Person santa) {
         return !lastName.equals(santa.lastName);

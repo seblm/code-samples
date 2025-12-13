@@ -31,7 +31,7 @@ public final class ProduitsEnVente {
      * Crée une liste de Produit_simple.
      * @param productName nom des produits à créer
      * @param price prix des produits
-     * @param quantité nom de Produit_simple à créer
+     * @param quantity nom de Produit_simple à créer
      */
     static List<Produit> createProduits(String productName, double price, int quantity) {
         List<Produit> newProducts = new ArrayList<Produit>();

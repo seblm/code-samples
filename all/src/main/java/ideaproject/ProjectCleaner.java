@@ -39,7 +39,7 @@ public class ProjectCleaner {
         }
     }
 
-    public static void main(String... args) {
+    static void main(String... args) {
         System.exit(launchCleanDirectory(args).runEndTask().status());
     }
 

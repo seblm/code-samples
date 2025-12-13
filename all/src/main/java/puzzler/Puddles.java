@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import static java.util.logging.Logger.getLogger;
 
 /**
- * Inspired from http://qandwhat.apps.runkite.com/i-failed-a-twitter-interview
+ * Inspired from <a href="http://qandwhat.apps.runkite.com/i-failed-a-twitter-interview">I failed a Twitter Interview</a>
  */
 public class Puddles {
     private static final Logger LOGGER = getLogger(Puddles.class.getName());
@@ -18,14 +18,10 @@ public class Puddles {
 
     public Puddles(Integer... wallHeights) {
         this.wallHeights = wallHeights;
-        this.maxWallHeights = Stream.of(wallHeights).max(Comparator.<Integer>naturalOrder()).get();
+        this.maxWallHeights = Stream.of(wallHeights).max(Comparator.<Integer>naturalOrder()).orElse(-1);
     }
 
     public int rain() {
-        return rain(0);
-    }
-
-    private int rain(int previousRain) {
         print();
         int rain = 0;
         for (int x = 0; x < wallHeights.length; x++) {
@@ -35,7 +31,7 @@ public class Puddles {
                 wallHeights[x]++;
             }
         }
-        if (rain == previousRain) {
+        if (rain == 0) {
             return 0;
         }
         return rain + rain();

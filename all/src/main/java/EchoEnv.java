@@ -8,7 +8,7 @@ import static java.lang.System.out;
 public class EchoEnv {
 
     public static void main(String[] args) throws IOException {
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(getRuntime().exec("/usr/bin/env").getInputStream()))) {
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(getRuntime().exec(new String[]{"/usr/bin/env"}).getInputStream()))) {
             String currentLine;
             while ((currentLine = in.readLine()) != null) {
                 if (currentLine.startsWith("PATH")) {

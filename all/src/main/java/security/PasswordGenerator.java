@@ -1,6 +1,7 @@
 package security;
 
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import static java.util.stream.IntStream.range;
 
@@ -8,22 +9,17 @@ public class PasswordGenerator {
     public static final Integer DEFAULT_SIZE = 16;
 
     public String generate(Integer size) {
-        final String chars = "" +
-                "0123456789" +
-                "abcdefghijklmnopqrstuvwxyz" +
-                "ABCDEFGHIJKLMNOPQRSTUVWXYZ" +
-                " .!:@#$%&*()_+=|<>?{}[]-/";
+        final var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ .!:@#$%&*()_+=|<>?{}[]-/";
+        final var random = new Random();
 
-        final Random random = new Random();
-        final StringBuilder password = new StringBuilder(size);
-
-        range(0, size).forEach((i) -> password.append(chars.charAt(random.nextInt(chars.length()))));
-
-        return password.toString();
+        return range(0, size)
+                .mapToObj(_ -> chars.charAt(random.nextInt(chars.length())))
+                .map(Object::toString)
+                .collect(Collectors.joining());
     }
 
-    public static void main(String... args) {
-        Integer length = DEFAULT_SIZE;
+    static void main(String... args) {
+        var length = DEFAULT_SIZE;
         if (args.length == 1) {
             try {
                 length = Integer.parseInt(args[0]);

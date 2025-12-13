@@ -12,7 +12,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static java.util.Arrays.asList;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
@@ -38,7 +37,7 @@ public class SecretSantaTest {
         Person bruce = new Person("Bruce", "Wayne", "bruce@imbatman.com");
         Person virgil = new Person("Virgil", "Brigman", "virgil@rigworkersunion.org");
         Person lindsey = new Person("Lindsey", "Brigman", "lindsey@iseealiens.net");
-        List<Person> persons = asList(luke, leia, toula, gus, bruce, virgil, lindsey);
+        List<Person> persons = List.of(luke, leia, toula, gus, bruce, virgil, lindsey);
         SecretSanta secretSanta = new SecretSanta(persons, emailer);
 
         secretSanta.chooseSantas();
@@ -51,7 +50,7 @@ public class SecretSantaTest {
         Person luke = new Person("Luke", "Skywalker", "luke@theforce.net");
         Person toula = new Person("Toula", "Portokalos", "toula@manhunter.org");
         Person virgil = new Person("Virgil", "Brigman", "virgil@rigworkersunion.org");
-        List<Person> persons = asList(luke, toula, virgil);
+        List<Person> persons = List.of(luke, toula, virgil);
         SecretSanta secretSanta = new SecretSanta(persons, emailer);
 
         secretSanta.chooseSantas();
@@ -71,9 +70,9 @@ public class SecretSantaTest {
             assertThat(personAndSantas.getKey())
                     .as("santas for %s could not be hitself", personAndSantas.getKey())
                     .isNotEqualTo(personAndSantas.getValue());
-            assertThat(personAndSantas.getKey().lastName)
+            assertThat(personAndSantas.getKey().lastName())
                     .as("santas for %s could not belongs to same family", personAndSantas.getKey())
-                    .isNotEqualTo(personAndSantas.getValue().lastName);
+                    .isNotEqualTo(personAndSantas.getValue().lastName());
         }
         assertThat(new ArrayList<>(santas.values())).containsOnly(personsAsArray);
     }

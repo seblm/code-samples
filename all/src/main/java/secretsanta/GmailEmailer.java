@@ -32,16 +32,15 @@ class GmailEmailer implements Emailer {
     public void email(Person to, Person santa) {
         try {
             Message message = new MimeMessage(session);
-            message.setRecipients(Message.RecipientType.TO, singletonList(new InternetAddress(to.email)).toArray(new Address[1]));
+            message.setRecipients(Message.RecipientType.TO, singletonList(new InternetAddress(to.email())).toArray(new Address[1]));
             message.setSubject("Cadeau de Noël du 14 janvier 2023");
-            message.setText("" +
-                    "Bonjour " + to.firstName + "," +
-                    "\n" +
-                    "\n" +
-                    "Voici le prénom de la personne à qui tu devras offrir un cadeau le 14 janvier 2023 à Vertou :\n" +
-                    santa.firstName + "\n" +
-                    "\n" +
-                    "C'est un tirage au sort : personne d'autre que toi n'est au courant ! Garde le secret.");
+            message.setText("""
+                    Bonjour %s,
+                    
+                    Voici le prénom de la personne à qui tu devras offrir un cadeau le 14 janvier 2023 à Vertou :
+                    %s
+                    
+                    C’est un tirage au sort : personne d’autre que toi n'est au courant ! Garde le secret.""".formatted(to.firstName(), santa.firstName()));
             message.setSentDate(new Date());
             Transport.send(message);
         } catch (MessagingException e) {

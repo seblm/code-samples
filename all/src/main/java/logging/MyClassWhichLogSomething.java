@@ -6,11 +6,11 @@ import java.io.StringWriter;
 import java.util.Date;
 import java.util.logging.*;
 
-public class MyClassWichLogSomething {
+public class MyClassWhichLogSomething {
 
     public final Logger logger = LogManager.getLogManager().getLogger("myLogger");
 
-    public MyClassWichLogSomething() {
+    public MyClassWhichLogSomething() {
         logger.finest("finest");
         logger.finer("finer");
         logger.fine("fine");
@@ -20,7 +20,7 @@ public class MyClassWichLogSomething {
         logger.severe("severe");
     }
 
-    public static void main(String... args) {
+    static void main(String... args) {
         LogManager logManager = LogManager.getLogManager();
         Logger myLogger = logManager.getLogger("myLogger");
         if (myLogger == null) {
@@ -58,7 +58,7 @@ public class MyClassWichLogSomething {
             handler.setFormatter(myFormat);
             myLogger.addHandler(handler);
         }
-        new MyClassWichLogSomething();
+        new MyClassWhichLogSomething();
     }
 
 }

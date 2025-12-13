@@ -45,7 +45,7 @@ public class RPNCalculatorTest {
     }
 
     @Test
-    public void should_return_priotized_operations() {
+    public void should_return_prioritized_operations() {
         assertThat(rpnCalculator.compute("4 2 + 3 -")).isEqualTo("3");
         assertThat(rpnCalculator.compute("3 5 8 * 7 + *")).isEqualTo("141");
     }

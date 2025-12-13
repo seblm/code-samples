@@ -36,14 +36,14 @@ public class CsvToSQL {
         Date previousDate = null;
         for (SecurityPrice securityPrice : securityPrices) {
             if (!securityPrice.date.equals(previousDate)) {
-                if (sql.length() > 0) {
+                if (!sql.isEmpty()) {
                     sql.append(";\n");
                 }
                 sql.append("insert into price (date, value, security_ticker) values");
             } else {
                 sql.append(',');
             }
-            sql.append(securityPrice.toString());
+            sql.append(securityPrice);
             previousDate = securityPrice.date;
         }
         sql.append(";");
@@ -72,10 +72,10 @@ public class CsvToSQL {
         return securityPrices;
     }
 
-    private class SecurityPrice {
+    private static class SecurityPrice {
 
         private final Date date;
-        private String security;
+        private final String security;
         private Float price;
 
         public SecurityPrice(Date date, String security) {
@@ -94,8 +94,8 @@ public class CsvToSQL {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(new CsvToSQL(System.in).toString());
+    static void main() {
+        System.out.println(new CsvToSQL(System.in));
     }
 
 }

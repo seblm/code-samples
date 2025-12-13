@@ -10,7 +10,7 @@ public class PersonTest {
     public void test() {
         Person person = new Person();
 
-        person.update(person.age);
+        Person.update(person.age);
 
         assertThat(person.age).isEqualTo(20);
     }

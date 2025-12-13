@@ -2,9 +2,6 @@ package secretsanta;
 
 import java.util.*;
 
-import static java.util.Arrays.asList;
-import static java.util.stream.Collectors.toList;
-
 class SecretSanta {
 
     private final List<Person> persons;
@@ -38,7 +35,7 @@ class SecretSanta {
                         return otherPersonSantas.canHaveSantaAs(person)
                                 && personSanta.canHaveSantaAs(otherPerson);
                     })
-                    .collect(toList());
+                    .toList();
 
             if (candidates.isEmpty()) {
                 throw new RuntimeException("impossible");
@@ -57,8 +54,8 @@ class SecretSanta {
         santas.put(otherPerson, previousPersonSantas);
     }
 
-    public static void main(String[] args) {
-        new SecretSanta(asList(
+    static void main() {
+        new SecretSanta(List.of(
                 new Person("****", "** ***** *******", "****.*******@gmail.com"),
                 new Person("*******", "** ***** *********", "*******.**-*****@laposte.net"),
                 new Person("*******", "** ***** *********", "*******_*****@hotmail.com"),

@@ -34,7 +34,7 @@ public class IngredientsTest {
         List<Ingredient> ingredients = Ingredients.createIngredients("cornichons", .3, 2);
         ingredients.addAll(Ingredients.createIngredients("tomate", .5, 1));
         ingredients.addAll(Ingredients.createIngredients("steack", 1, 1));
-        Produit bigMac = ProduitsEnVente.createProduits("Big Mac", 4.5, ingredients.toArray(new Ingredient[ingredients.size()]));
+        Produit bigMac = ProduitsEnVente.createProduits("Big Mac", 4.5, ingredients.toArray(new Ingredient[0]));
     }
 
 }
